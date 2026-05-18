@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi tiết sách - BookHaven</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <header class="header">
-        <div class="container header-container">
-            <a href="index.html" class="logo"><img src="assets/images/logo/logo.png" alt="BookHaven Logo" style="height: 50px;"></a>
-                        <nav class="nav-menu">
+const fs = require('fs');
+
+const navHtml = `            <nav class="nav-menu">
                 <ul class="nav-links">
                     <li><a href="index.html">Trang chủ</a></li>
                     <li><a href="products.html">Cửa hàng</a></li>
@@ -28,17 +14,9 @@
                         <span class="cart-count">0</span>
                     </a>
                 </div>
-            </nav>
-        </div>
-    </header>
+            </nav>`;
 
-    <main class="main-content container page-detail">
-        <div class="detail-layout" id="productDetailContainer">
-            <!-- JS render -->
-        </div>
-    </main>
-
-        <footer class="footer">
+const footerHtml = `    <footer class="footer">
         <div class="container footer-container">
             <div class="footer-col">
                 <a href="index.html" class="logo"><img src="assets/images/logo/logo.png" alt="BookHaven Logo" style="height: 50px;"></a>
@@ -72,8 +50,20 @@
         <div class="footer-bottom">
             <p>&copy; 2026 BookHaven. Thiết kế cho Đồ án Môn học.</p>
         </div>
-    </footer>
-    <script src="assets/js/products.js"></script>
-    <script src="assets/js/main.js"></script>
-</body>
-</html>
+    </footer>`;
+
+const files = ['index.html', 'products.html', 'detail.html', 'cart.html', 'checkout.html', 'login.html'];
+
+files.forEach(file => {
+    let content = fs.readFileSync(file, 'utf8');
+    
+    // Replace Nav
+    content = content.replace(/<nav class="nav-menu">[\s\S]*?<\/nav>/, navHtml);
+    
+    // Replace Footer
+    content = content.replace(/<footer class="footer">[\s\S]*?<\/footer>/, footerHtml);
+    
+    fs.writeFileSync(file, content, 'utf8');
+});
+
+console.log('Layout updated across all files!');

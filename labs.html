@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Lab - BookHaven</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .page-labs {
+            padding: 60px 0;
+            min-height: 60vh;
+        }
+        .labs-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .labs-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .labs-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .labs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .lab-card {
+            background-color: var(--bg-alt);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 40px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .lab-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--secondary-color);
+        }
+        .lab-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        .lab-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .lab-desc {
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+        .lab-btn {
+            background-color: var(--primary-color);
+            color: var(--bg-alt);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .lab-card:hover .lab-btn {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo/logo.png" alt="BookHaven Logo" style="height: 50px;">
+            </a>
+
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm sách, tác giả...">
+                <button type="button" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="products.html">Cửa hàng</a></li>
+                    <li><a href="labs.html" class="active">Báo cáo Lab</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="login.html" class="action-icon" title="Tài khoản"><i class="fa-regular fa-user"></i></a>
+                    <a href="cart.html" class="action-icon cart-icon" title="Giỏ hàng">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content container page-labs">
+        <div class="labs-header">
+            <h1>Danh Sách Báo Cáo Lab</h1>
+            <p>Tổng hợp 8 bài thực hành môn Nhập môn Web. Nhấn vào từng mục để xem chi tiết bài làm.</p>
+        </div>
+
+        <div class="labs-grid">
+            <!-- Lab 1 -->
+            <div class="lab-card">
+                <i class="fa-solid fa-laptop-code lab-icon"></i>
+                <h2 class="lab-title">Lab 1</h2>
+                <p class="lab-desc">HTML Cơ bản & Cấu trúc Web</p>
+                <a href="labs/lab1.html" class="lab-btn">Xem chi tiết</a>
+            </div>
+            <!-- Lab 2 -->
+            <div class="lab-card">
+                <i class="fa-solid fa-palette lab-icon"></i>
+                <h2 class="lab-title">Lab 2</h2>
+                <p class="lab-desc">CSS Cơ bản & Định dạng</p>
+                <a href="labs/lab2.html" class="lab-btn">Xem chi tiết</a>
+            </div>
+            <!-- Lab 3 -->
+            <div class="lab-card">
+                <i class="fa-solid fa-border-all lab-icon"></i>
+                <h2 class="lab-title">Lab 3</h2>
+                <p class="lab-desc">Layout Flexbox & Grid</p>
+                <a href="labs/lab3.html" class="lab-btn">Xem chi tiết</a>
+            </div>
+            <!-- Lab 4 -->
+            <div class="lab-card">
+                <i class="fa-solid fa-mobile-screen lab-icon"></i>
+                <h2 class="lab-title">Lab 4</h2>
+                <p class="lab-desc">Responsive Web Design</p>
+                <a href="labs/lab4.html" class="lab-btn">Xem chi tiết</a>
+            </div>
+            <!-- Lab 5 -->
+            <div class="lab-card">
+                <i class="fa-brands fa-js lab-icon"></i>
+                <h2 class="lab-title">Lab 5</h2>
+                <p class="lab-desc">Javascript Cơ bản & DOM</p>
+                <a href="labs/lab5.html" class="lab-btn">Xem chi tiết</a>
+            </div>
+            <!-- Lab 6 -->
+            <div class="lab-card">
+                <i class="fa-solid fa-wand-magic-sparkles lab-icon"></i>
+                <h2 class="lab-title">Lab 6</h2>
+                <p class="lab-desc">Hiệu ứng & Animation JS</p>
+                <a href="labs/lab6.html" class="lab-btn">Xem chi tiết</a>
+            </div>
+            <!-- Lab 7 -->
+            <div class="lab-card">
+                <i class="fa-solid fa-database lab-icon"></i>
+                <h2 class="lab-title">Lab 7</h2>
+                <p class="lab-desc">Lưu trữ Web & LocalStorage</p>
+                <a href="labs/lab7.html" class="lab-btn">Xem chi tiết</a>
+            </div>
+            <!-- Lab 8 -->
+            <div class="lab-card">
+                <i class="fa-solid fa-rocket lab-icon"></i>
+                <h2 class="lab-title">Lab 8</h2>
+                <p class="lab-desc">Đồ án Web & Triển khai</p>
+                <a href="labs/lab8.html" class="lab-btn">Xem chi tiết</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="index.html" class="logo"><img src="assets/images/logo/logo.png" alt="BookHaven Logo" style="height: 50px;"></a>
+                <p>Nền tảng mua sắm sách trực tuyến uy tín, đa dạng thể loại và giao hàng nhanh chóng.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Về chúng tôi</h3>
+                <ul>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Hỗ trợ khách hàng</h3>
+                <ul>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Kết nối</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BookHaven. Thiết kế cho Đồ án Môn học.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
