@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BookHaven - Hệ thống bán sách trực tuyến</title>
+    <title>Hệ thống bán sách trực tuyến</title>
 
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,7 +60,7 @@
                 <div class="banner-text">
                     <h1>Khám phá tri thức<br><span>thức tỉnh tâm hồn</span></h1>
                     <p>Hàng ngàn đầu sách hấp dẫn đang chờ bạn khám phá với mức giá ưu đãi nhất.</p>
-                    <a href="products.html" class="btn btn-primary">Mua sắm ngay</a>
+                    <a href="products.html" class="btn btn-primary">Mua Sách ngay</a>
                 </div>
                 <div class="banner-image">
                     <img src="assets/images/banner/banner.png" alt="Book Banner">
@@ -68,11 +68,96 @@
             </div>
         </section>
 
-        <!-- Featured Products Placeholder -->
+        <!-- Features Bar -->
+        <section class="features-bar" style="background-color: var(--bg-alt); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); padding: 25px 0; margin-bottom: 50px;">
+            <div class="container features-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px;">
+                <div class="feature-item" style="display: flex; align-items: center; gap: 15px;">
+                    <i class="fa-solid fa-truck" style="font-size: 2rem; color: var(--secondary-color);"></i>
+                    <div>
+                        <h4 style="margin: 0; font-size: 1rem; color: var(--primary-color);">Miễn Phí Vận Chuyển</h4>
+                        <p style="margin: 3px 0 0; font-size: 0.85rem; color: var(--text-muted);">Mọi đơn giao nội địa Việt Nam</p>
+                    </div>
+                </div>
+                <div class="feature-item" style="display: flex; align-items: center; gap: 15px;">
+                    <i class="fa-solid fa-arrow-rotate-left" style="font-size: 2rem; color: var(--secondary-color);"></i>
+                    <div>
+                        <h4 style="margin: 0; font-size: 1rem; color: var(--primary-color);">7 Ngày Đổi Trả</h4>
+                        <p style="margin: 3px 0 0; font-size: 0.85rem; color: var(--text-muted);">Đổi mới nếu phát hiện lỗi in</p>
+                    </div>
+                </div>
+                <div class="feature-item" style="display: flex; align-items: center; gap: 15px;">
+                    <i class="fa-solid fa-shield-halved" style="font-size: 2rem; color: var(--secondary-color);"></i>
+                    <div>
+                        <h4 style="margin: 0; font-size: 1rem; color: var(--primary-color);">Bảo Mật 100%</h4>
+                        <p style="margin: 3px 0 0; font-size: 0.85rem; color: var(--text-muted);">Giao dịch an toàn & tin cậy</p>
+                    </div>
+                </div>
+                <div class="feature-item" style="display: flex; align-items: center; gap: 15px;">
+                    <i class="fa-solid fa-headset" style="font-size: 2rem; color: var(--secondary-color);"></i>
+                    <div>
+                        <h4 style="margin: 0; font-size: 1rem; color: var(--primary-color);">Hỗ Trợ Tận Tâm</h4>
+                        <p style="margin: 3px 0 0; font-size: 0.85rem; color: var(--text-muted);">Phục vụ chu đáo, hỗ trợ 24/7</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
         <section class="featured-products container">
             <h2 class="section-title">Sách Nổi Bật</h2>
             <div class="products-grid" id="featuredProducts">
                 <!-- JS sẽ render sản phẩm vào đây -->
+            </div>
+        </section>
+
+        <!-- Categories Showcase -->
+        <section class="categories-showcase container" style="margin-top: 70px; margin-bottom: 70px;">
+            <h2 class="section-title" style="text-align: center;">Khám Phá Theo Thể Loại</h2>
+            <div class="categories-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; margin-top: 30px;">
+                <a href="products.html?category=Văn học" class="category-card" style="display: flex; flex-direction: column; align-items: center; padding: 30px 20px; background-color: var(--bg-alt); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; text-align: center;">
+                    <i class="fa-solid fa-pen-fancy" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 15px;"></i>
+                    <h4 style="margin: 0; color: var(--primary-color); font-size: 1.1rem; font-weight: 600;">Văn Học Việt Nam</h4>
+                    <p style="margin: 8px 0 0; font-size: 0.85rem; color: var(--text-muted);">Tiểu thuyết, truyện ngắn tinh tuyển</p>
+                </a>
+                <a href="products.html?category=Kinh tế" class="category-card" style="display: flex; flex-direction: column; align-items: center; padding: 30px 20px; background-color: var(--bg-alt); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; text-align: center;">
+                    <i class="fa-solid fa-chart-line" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 15px;"></i>
+                    <h4 style="margin: 0; color: var(--primary-color); font-size: 1.1rem; font-weight: 600;">Kinh Doanh & Đầu Tư</h4>
+                    <p style="margin: 8px 0 0; font-size: 0.85rem; color: var(--text-muted);">Quản trị doanh nghiệp, tài chính cá nhân</p>
+                </a>
+                <a href="products.html?category=Kỹ năng" class="category-card" style="display: flex; flex-direction: column; align-items: center; padding: 30px 20px; background-color: var(--bg-alt); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; text-align: center;">
+                    <i class="fa-solid fa-lightbulb" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 15px;"></i>
+                    <h4 style="margin: 0; color: var(--primary-color); font-size: 1.1rem; font-weight: 600;">Tâm Lý Kỹ Năng</h4>
+                    <p style="margin: 8px 0 0; font-size: 0.85rem; color: var(--text-muted);">Phát triển bản thân, kỹ năng sống</p>
+                </a>
+                <a href="products.html?category=Thiếu nhi" class="category-card" style="display: flex; flex-direction: column; align-items: center; padding: 30px 20px; background-color: var(--bg-alt); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; text-align: center;">
+                    <i class="fa-solid fa-child-reaching" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 15px;"></i>
+                    <h4 style="margin: 0; color: var(--primary-color); font-size: 1.1rem; font-weight: 600;">Sách Thiếu Nhi</h4>
+                    <p style="margin: 8px 0 0; font-size: 0.85rem; color: var(--text-muted);">Truyện tranh, truyện ngụ ngôn ý nghĩa</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Literary Quote Section -->
+        <section class="literary-quote" style="background-color: var(--bg-alt); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); padding: 60px 20px; text-align: center; margin-bottom: 70px;">
+            <div class="container" style="max-width: 800px; margin: 0 auto;">
+                <i class="fa-solid fa-quote-left" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 20px;"></i>
+                <blockquote style="margin: 0; font-family: var(--font-heading); font-size: 1.6rem; font-style: italic; color: var(--primary-color); line-height: 1.6; font-weight: 500;">
+                    "Một cuốn sách thực sự hay nên đọc trong tuổi trẻ, rồi đọc lại khi trưởng thành, và một lần nữa lúc tuổi già."
+                </blockquote>
+                <cite style="display: block; margin-top: 15px; font-size: 1rem; font-weight: 600; color: var(--text-muted); font-style: normal;">— Robertson Davies</cite>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section container" style="margin-bottom: 80px; text-align: center;">
+            <div class="box-shadow-panel" style="padding: 50px 30px; background-color: var(--bg-alt); border: 1px solid var(--border-color); border-radius: var(--radius-md); max-width: 700px; margin: 0 auto;">
+                <i class="fa-regular fa-paper-plane" style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 20px;"></i>
+                <h2 style="font-family: var(--font-heading); color: var(--primary-color); margin-bottom: 10px;">Đăng Ký Nhận Bản Tin</h2>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 25px;">Đăng ký để cập nhật các đầu sách mới nhất và ưu đãi giảm 10% cho đơn hàng tiếp theo.</p>
+                <form style="display: flex; gap: 10px; max-width: 500px; margin: 0 auto; flex-wrap: wrap;" onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã đăng ký nhận bản tin từ BookHaven!'); this.reset();">
+                    <input type="email" placeholder="Nhập địa chỉ email của bạn" required style="flex: 1; padding: 12px 15px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); outline: none; background: var(--bg-main); font-family: inherit; font-size: 0.95rem; min-width: 250px;">
+                    <button type="submit" class="btn btn-primary" style="padding: 12px 25px; font-size: 0.95rem; min-width: 140px; margin: 0 auto;">Đăng Ký</button>
+                </form>
             </div>
         </section>
     </main>
@@ -111,7 +196,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 BookHaven. Thiết kế cho Đồ án Môn học.</p>
+            <p>&copy; Đồ án Cuối kỳ Nhập môn ứng dụng web</p>
         </div>
     </footer>
 

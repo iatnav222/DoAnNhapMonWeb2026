@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giỏ hàng - BookHaven</title>
-    
+    <title>Chính sách bảo mật - BookHaven</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -43,59 +42,33 @@
         </div>
     </header>
 
-    <!-- Main Content: Cart -->
-    <main class="main-content container page-cart">
-        <h1 class="page-title">Giỏ hàng của bạn</h1>
+    <!-- Main Content: Privacy -->
+    <main class="main-content container" style="padding: 40px 20px; max-width: 900px;">
+        <h1 class="page-title" style="font-family: var(--font-heading); color: var(--primary-color); border-bottom: 2px solid var(--secondary-color); padding-bottom: 15px; margin-bottom: 30px; display: inline-block;">Chính sách bảo mật thông tin</h1>
         
-        <div class="cart-layout">
-            <!-- Danh sách sản phẩm trong giỏ -->
-            <div class="cart-items-container">
-                <div class="cart-header">
-                    <span>Sản phẩm</span>
-                    <span>Giá</span>
-                    <span>Số lượng</span>
-                    <span>Tổng</span>
-                    <span></span>
-                </div>
-                <div id="cartItemsContainer">
-                    <!-- JS sẽ render HTML các item vào đây -->
-                </div>
-            </div>
-
-            <!-- Tổng kết đơn hàng -->
-            <div class="cart-summary box-shadow-panel">
-                <h3>Tổng đơn hàng</h3>
-                <div class="summary-row">
-                    <span>Tạm tính:</span>
-                    <span id="cartSubtotal" class="summary-value">0 đ</span>
-                </div>
-                
-                <div class="summary-row" id="discountRow" style="display: none; justify-content: space-between; margin: 10px 0;">
-                    <span>Giảm giá:</span>
-                    <span id="cartDiscount" class="summary-value text-green">-0 đ</span>
-                </div>
-                
-                <div class="summary-row">
-                    <span>Phí giao hàng:</span>
-                    <span class="summary-value text-green">Miễn phí</span>
-                </div>
-                
-                <div class="promo-code-container" style="margin: 20px 0 15px;">
-                    <div style="display: flex; gap: 10px;">
-                        <input type="text" id="promoInput" placeholder="Nhập mã giảm giá" style="flex: 1; padding: 10px 12px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); outline: none; background: var(--bg-main); font-family: inherit; font-size: 0.9rem;">
-                        <button type="button" id="applyPromoBtn" class="btn btn-primary" style="padding: 10px 15px; font-size: 0.9rem;">Áp dụng</button>
-                    </div>
-                    <div id="promoMsg" style="margin-top: 6px; font-size: 0.85rem; font-weight: 500; display: none;"></div>
-                </div>
-                
-                <hr class="summary-divider">
-                <div class="summary-row summary-total">
-                    <span>Tổng cộng:</span>
-                    <span id="cartTotal" class="summary-value total-value">0 đ</span>
-                </div>
-                <a href="checkout.html" class="btn btn-primary btn-block">Tiến hành thanh toán</a>
-                <a href="products.html" class="continue-shopping"><i class="fa-solid fa-arrow-left"></i> Tiếp tục mua sắm</a>
-            </div>
+        <div class="box-shadow-panel" style="padding: 35px; background-color: var(--bg-alt); border: 1px solid var(--border-color); border-radius: var(--radius-md); line-height: 1.8; color: var(--text-main);">
+            <p style="margin-bottom: 20px;">BookHaven cam kết bảo vệ quyền riêng tư và thông tin cá nhân của bạn. Chính sách bảo mật này giải thích cách chúng tôi thu thập, sử dụng và bảo vệ thông tin của bạn khi bạn sử dụng hệ thống mua sách của chúng tôi.</p>
+            
+            <h3 style="color: var(--primary-color); margin-top: 30px; margin-bottom: 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">1. Thu thập thông tin cá nhân</h3>
+            <p style="margin-bottom: 15px;">Chúng tôi chỉ thu thập thông tin cần thiết để phục vụ quy trình xử lý đơn hàng và giao sách, bao gồm:</p>
+            <ul style="padding-left: 20px; margin-bottom: 20px; list-style-type: disc;">
+                <li>Họ và tên của bạn.</li>
+                <li>Số điện thoại liên lạc.</li>
+                <li>Địa chỉ nhận hàng (nhà riêng hoặc cơ quan).</li>
+                <li>Địa chỉ Email để nhận thông tin xác nhận đơn hàng và cập nhật khuyến mại.</li>
+            </ul>
+            
+            <h3 style="color: var(--primary-color); margin-top: 30px; margin-bottom: 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">2. Mục đích sử dụng thông tin</h3>
+            <p style="margin-bottom: 15px;">Mọi thông tin cá nhân thu thập được chỉ sử dụng nội bộ cho các mục đích:</p>
+            <ul style="padding-left: 20px; margin-bottom: 20px; list-style-type: disc;">
+                <li>Xử lý, xác nhận và giao nhận đơn hàng của bạn.</li>
+                <li>Liên hệ hỗ trợ kỹ thuật hoặc giải quyết khiếu nại.</li>
+                <li>Gửi thông báo cập nhật tình hình đơn hàng qua email.</li>
+                <li>Cải tiến chất lượng phục vụ và tối ưu giao diện web.</li>
+            </ul>
+            
+            <h3 style="color: var(--primary-color); margin-top: 30px; margin-bottom: 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">3. Bảo mật thông tin dữ liệu</h3>
+            <p style="margin-bottom: 20px;">BookHaven áp dụng các phương thức mã hóa an toàn dữ liệu trên client-side để bảo vệ thông tin cá nhân không bị mất mát, đánh cắp hay sử dụng sai mục đích. Chúng tôi cam kết không chia sẻ hoặc bán dữ liệu người dùng cho bất kỳ bên thứ ba nào vì mục đích thương mại.</p>
         </div>
     </main>
 

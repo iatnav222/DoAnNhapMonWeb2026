@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giỏ hàng - BookHaven</title>
-    
+    <title>Giới thiệu - BookHaven</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -43,59 +42,31 @@
         </div>
     </header>
 
-    <!-- Main Content: Cart -->
-    <main class="main-content container page-cart">
-        <h1 class="page-title">Giỏ hàng của bạn</h1>
+    <!-- Main Content: About Us -->
+    <main class="main-content container" style="padding: 40px 20px; max-width: 900px;">
+        <h1 class="page-title" style="font-family: var(--font-heading); color: var(--primary-color); border-bottom: 2px solid var(--secondary-color); padding-bottom: 15px; margin-bottom: 30px; display: inline-block;">Giới thiệu về BookHaven</h1>
         
-        <div class="cart-layout">
-            <!-- Danh sách sản phẩm trong giỏ -->
-            <div class="cart-items-container">
-                <div class="cart-header">
-                    <span>Sản phẩm</span>
-                    <span>Giá</span>
-                    <span>Số lượng</span>
-                    <span>Tổng</span>
-                    <span></span>
-                </div>
-                <div id="cartItemsContainer">
-                    <!-- JS sẽ render HTML các item vào đây -->
-                </div>
+        <div class="box-shadow-panel" style="padding: 35px; background-color: var(--bg-alt); border: 1px solid var(--border-color); border-radius: var(--radius-md); line-height: 1.8; color: var(--text-main);">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <img src="assets/images/logo/logo.png" alt="BookHaven Banner" style="max-height: 80px; margin-bottom: 20px;">
+                <h3 style="font-family: var(--font-heading); color: var(--primary-color); font-size: 1.5rem;">Hải cảng của Tri thức và Tâm hồn</h3>
             </div>
-
-            <!-- Tổng kết đơn hàng -->
-            <div class="cart-summary box-shadow-panel">
-                <h3>Tổng đơn hàng</h3>
-                <div class="summary-row">
-                    <span>Tạm tính:</span>
-                    <span id="cartSubtotal" class="summary-value">0 đ</span>
-                </div>
-                
-                <div class="summary-row" id="discountRow" style="display: none; justify-content: space-between; margin: 10px 0;">
-                    <span>Giảm giá:</span>
-                    <span id="cartDiscount" class="summary-value text-green">-0 đ</span>
-                </div>
-                
-                <div class="summary-row">
-                    <span>Phí giao hàng:</span>
-                    <span class="summary-value text-green">Miễn phí</span>
-                </div>
-                
-                <div class="promo-code-container" style="margin: 20px 0 15px;">
-                    <div style="display: flex; gap: 10px;">
-                        <input type="text" id="promoInput" placeholder="Nhập mã giảm giá" style="flex: 1; padding: 10px 12px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); outline: none; background: var(--bg-main); font-family: inherit; font-size: 0.9rem;">
-                        <button type="button" id="applyPromoBtn" class="btn btn-primary" style="padding: 10px 15px; font-size: 0.9rem;">Áp dụng</button>
-                    </div>
-                    <div id="promoMsg" style="margin-top: 6px; font-size: 0.85rem; font-weight: 500; display: none;"></div>
-                </div>
-                
-                <hr class="summary-divider">
-                <div class="summary-row summary-total">
-                    <span>Tổng cộng:</span>
-                    <span id="cartTotal" class="summary-value total-value">0 đ</span>
-                </div>
-                <a href="checkout.html" class="btn btn-primary btn-block">Tiến hành thanh toán</a>
-                <a href="products.html" class="continue-shopping"><i class="fa-solid fa-arrow-left"></i> Tiếp tục mua sắm</a>
-            </div>
+            
+            <p style="margin-bottom: 20px;">Chào mừng bạn đến với <strong>BookHaven</strong> - tiệm sách cổ điển trực tuyến được thành lập vào năm 2026. Chúng tôi tin rằng mỗi cuốn sách là một chuyến hành trình, một người bạn tâm giao có thể xoa dịu tâm hồn và thắp sáng tri thức của con người.</p>
+            
+            <h3 style="color: var(--primary-color); margin-top: 30px; margin-bottom: 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">Sứ mệnh của chúng tôi</h3>
+            <p style="margin-bottom: 20px;">Giữa thế giới số hóa chuyển động không ngừng, BookHaven mong muốn mang lại một không gian đọc sách ấm cúng, thư thái mang đậm hơi thở cổ điển (Vintage Library). Chúng tôi không chỉ cung cấp những cuốn sách chất lượng cao được tuyển chọn kỹ lưỡng, mà còn kiến tạo một hải cảng bình yên – một "haven" thực thụ để bạn tìm về sau những giờ phút bận rộn.</p>
+            
+            <h3 style="color: var(--primary-color); margin-top: 30px; margin-bottom: 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">Giá trị cốt lõi</h3>
+            <ul style="padding-left: 20px; margin-bottom: 20px; list-style-type: square;">
+                <li style="margin-bottom: 10px;"><strong>Tuyển chọn kỹ lưỡng:</strong> Mỗi cuốn sách có mặt trên BookHaven đều trải qua khâu thẩm định kỹ lưỡng về nội dung và chất lượng thẩm mỹ.</li>
+                <li style="margin-bottom: 10px;"><strong>Thân thiện môi trường:</strong> BookHaven cam kết tối ưu hóa quy trình đóng gói bằng giấy tái chế và kraft nguyên sinh thân thiện với môi trường.</li>
+                <li style="margin-bottom: 10px;"><strong>Trải nghiệm hoàn hảo:</strong> Chúng tôi luôn lắng nghe và nỗ lực mang lại dịch vụ chăm sóc khách hàng ấm áp, tận tâm nhất.</li>
+            </ul>
+            
+            <blockquote style="margin: 30px 0; padding: 20px; background-color: var(--bg-main); border-left: 4px solid var(--secondary-color); font-style: italic; border-radius: var(--radius-sm);">
+                "Sách là ngọn hải đăng đứng vững trước bão giông thời gian, thắp sáng cả biển rộng tri thức nhân loại."
+            </blockquote>
         </div>
     </main>
 

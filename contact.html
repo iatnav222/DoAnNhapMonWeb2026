@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - BookHaven</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo/logo.png" alt="BookHaven Logo" style="height: 50px;">
+            </a>
+
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm sách, tác giả...">
+                <button type="button" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="products.html">Cửa hàng</a></li>
+                    <li><a href="labs.html" class="lab-btn">Lab thực hành</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="login.html" class="action-icon" title="Tài khoản"><i class="fa-regular fa-user"></i></a>
+                    <a href="cart.html" class="action-icon cart-icon" title="Giỏ hàng">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content: Contact -->
+    <main class="main-content container" style="padding: 40px 20px;">
+        <h1 class="page-title"
+            style="font-family: var(--font-heading); color: var(--primary-color); border-bottom: 2px solid var(--secondary-color); padding-bottom: 15px; margin-bottom: 30px; display: inline-block;">
+            Liên hệ với BookHaven</h1>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
+            <!-- Contact Info Panel -->
+            <div class="box-shadow-panel"
+                style="padding: 35px; background-color: var(--bg-alt); border: 1px solid var(--border-color); border-radius: var(--radius-md); color: var(--text-main);">
+                <h3
+                    style="font-family: var(--font-heading); color: var(--primary-color); font-size: 1.4rem; margin: 0 0 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">
+                    Thông tin tiệm sách</h3>
+                <p style="margin-bottom: 25px; line-height: 1.8;">Mọi thắc mắc, phản hồi hoặc nhu cầu đặt mua số lượng
+                    lớn cho hội thảo/trường học, quý khách vui lòng liên hệ với BookHaven qua các thông tin bên dưới:
+                </p>
+
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    <div style="display: flex; gap: 15px; align-items: flex-start;">
+                        <i class="fa-solid fa-location-dot"
+                            style="font-size: 1.3rem; color: var(--secondary-color); margin-top: 3px; width: 25px;"></i>
+                        <div>
+                            <strong>Địa chỉ tiệm sách:</strong><br>
+                            <span style="font-size: 0.95rem; color: var(--text-muted);">180 Cao lỗ, Phường Chánh Hưng,
+                                Thành phố Hồ Chí Minh</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 15px; align-items: flex-start;">
+                        <i class="fa-solid fa-phone"
+                            style="font-size: 1.3rem; color: var(--secondary-color); margin-top: 3px; width: 25px;"></i>
+                        <div>
+                            <strong>Số điện thoại:</strong><br>
+                            <span style="font-size: 0.95rem; color: var(--text-muted);">028 3894 1894 - 090 123
+                                4567</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 15px; align-items: flex-start;">
+                        <i class="fa-solid fa-envelope"
+                            style="font-size: 1.3rem; color: var(--secondary-color); margin-top: 3px; width: 25px;"></i>
+                        <div>
+                            <strong>Địa chỉ Email:</strong><br>
+                            <span style="font-size: 0.95rem; color: var(--text-muted);">support@bookhaven.vn</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 15px; align-items: flex-start;">
+                        <i class="fa-solid fa-clock"
+                            style="font-size: 1.3rem; color: var(--secondary-color); margin-top: 3px; width: 25px;"></i>
+                        <div>
+                            <strong>Thời gian mở cửa:</strong><br>
+                            <span style="font-size: 0.95rem; color: var(--text-muted);">Thứ Hai - Chủ Nhật: 08:00 AM -
+                                09:30 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="box-shadow-panel"
+                style="padding: 35px; background-color: var(--bg-alt); border: 1px solid var(--border-color); border-radius: var(--radius-md);"
+                onsubmit="event.preventDefault(); alert('Cảm ơn phản hồi của bạn! BookHaven sẽ liên hệ lại trong vòng 24 giờ làm việc.'); this.reset();">
+                <h3
+                    style="font-family: var(--font-heading); color: var(--primary-color); font-size: 1.4rem; margin: 0 0 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">
+                    Gửi thông điệp</h3>
+
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">Họ và tên *</label>
+                    <input type="text" class="form-control" placeholder="Nhập họ và tên của bạn" required
+                        style="width: 100%; padding: 10px 15px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background: var(--bg-main);">
+                </div>
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">Địa chỉ Email *</label>
+                    <input type="email" class="form-control" placeholder="Nhập địa chỉ email" required
+                        style="width: 100%; padding: 10px 15px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background: var(--bg-main);">
+                </div>
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">Lời nhắn của bạn *</label>
+                    <textarea class="form-control" rows="4" placeholder="Nhập chi tiết lời nhắn..." required
+                        style="width: 100%; padding: 10px 15px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background: var(--bg-main); font-family: inherit;"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="padding: 12px 30px;">Gửi liên hệ</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="index.html" class="logo"><img src="assets/images/logo/logo.png" alt="BookHaven Logo"
+                        style="height: 50px;"></a>
+                <p>Nền tảng mua sắm sách trực tuyến uy tín, đa dạng thể loại và giao hàng nhanh chóng.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Về chúng tôi</h3>
+                <ul>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Hỗ trợ khách hàng</h3>
+                <ul>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Kết nối</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Đồ án Cuối kỳ Nhập môn ứng dụng web</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

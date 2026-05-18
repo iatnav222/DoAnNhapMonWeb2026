@@ -14,11 +14,11 @@
     <header class="header">
         <div class="container header-container">
             <a href="index.html" class="logo"><img src="assets/images/logo/logo.png" alt="BookHaven Logo" style="height: 50px;"></a>
-                        <nav class="nav-menu">
+            <nav class="nav-menu">
                 <ul class="nav-links">
                     <li><a href="index.html">Trang chủ</a></li>
                     <li><a href="products.html">Cửa hàng</a></li>
-                    <li><a href="labs.html" class="lab-btn">Báo cáo Lab</a></li>
+                    <li><a href="labs.html" class="lab-btn">Lab thực hành</a></li>
                 </ul>
                 
                 <div class="nav-actions">
@@ -36,9 +36,46 @@
         <div class="detail-layout" id="productDetailContainer">
             <!-- JS render -->
         </div>
+
+        <!-- Reviews Section -->
+        <section class="reviews-section box-shadow-panel" style="margin-top: 50px; padding: 30px; background-color: var(--bg-alt); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h3 style="font-family: var(--font-heading); font-size: 1.75rem; color: var(--primary-color); margin-bottom: 25px; border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px; display: inline-block;">Đánh giá của khách hàng</h3>
+            
+            <div id="reviewsList" style="margin-bottom: 30px;">
+                <!-- Review items will be loaded here dynamically from localStorage -->
+            </div>
+            
+            <form id="reviewForm" style="border-top: 1px solid var(--border-color); padding-top: 30px;">
+                <h4 style="font-size: 1.25rem; color: var(--primary-color); margin-bottom: 15px;">Viết nhận xét của bạn</h4>
+                
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">Chọn số sao đánh giá:</label>
+                    <div class="star-rating-input" id="starRatingInput" style="font-size: 1.5rem; color: #ffb300; cursor: pointer; display: flex; gap: 5px;">
+                        <i class="fa-solid fa-star" data-rating="1"></i>
+                        <i class="fa-solid fa-star" data-rating="2"></i>
+                        <i class="fa-solid fa-star" data-rating="3"></i>
+                        <i class="fa-solid fa-star" data-rating="4"></i>
+                        <i class="fa-solid fa-star" data-rating="5"></i>
+                    </div>
+                    <input type="hidden" id="reviewRatingVal" value="5">
+                </div>
+                
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">Tên của bạn *</label>
+                    <input type="text" id="reviewAuthor" class="form-control" placeholder="Nhập tên của bạn" required style="width: 100%; max-width: 400px; padding: 10px 15px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background: var(--bg-main);">
+                </div>
+                
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">Nội dung nhận xét *</label>
+                    <textarea id="reviewText" class="form-control" rows="4" placeholder="Nhập chia sẻ chi tiết về sách..." required style="width: 100%; padding: 10px 15px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background: var(--bg-main); font-family: inherit;"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="padding: 10px 25px;">Gửi nhận xét</button>
+            </form>
+        </section>
     </main>
 
-        <footer class="footer">
+    <footer class="footer">
         <div class="container footer-container">
             <div class="footer-col">
                 <a href="index.html" class="logo"><img src="assets/images/logo/logo.png" alt="BookHaven Logo" style="height: 50px;"></a>
@@ -70,7 +107,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 BookHaven. Thiết kế cho Đồ án Môn học.</p>
+            <p>&copy; Đồ án Cuối kỳ Nhập môn ứng dụng web</p>
         </div>
     </footer>
     <script src="assets/js/products.js"></script>

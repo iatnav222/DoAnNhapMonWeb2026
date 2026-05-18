@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giỏ hàng - BookHaven</title>
-    
+    <title>Điều khoản sử dụng - BookHaven</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -43,59 +42,25 @@
         </div>
     </header>
 
-    <!-- Main Content: Cart -->
-    <main class="main-content container page-cart">
-        <h1 class="page-title">Giỏ hàng của bạn</h1>
+    <!-- Main Content: Terms -->
+    <main class="main-content container" style="padding: 40px 20px; max-width: 900px;">
+        <h1 class="page-title" style="font-family: var(--font-heading); color: var(--primary-color); border-bottom: 2px solid var(--secondary-color); padding-bottom: 15px; margin-bottom: 30px; display: inline-block;">Điều khoản sử dụng dịch vụ</h1>
         
-        <div class="cart-layout">
-            <!-- Danh sách sản phẩm trong giỏ -->
-            <div class="cart-items-container">
-                <div class="cart-header">
-                    <span>Sản phẩm</span>
-                    <span>Giá</span>
-                    <span>Số lượng</span>
-                    <span>Tổng</span>
-                    <span></span>
-                </div>
-                <div id="cartItemsContainer">
-                    <!-- JS sẽ render HTML các item vào đây -->
-                </div>
-            </div>
-
-            <!-- Tổng kết đơn hàng -->
-            <div class="cart-summary box-shadow-panel">
-                <h3>Tổng đơn hàng</h3>
-                <div class="summary-row">
-                    <span>Tạm tính:</span>
-                    <span id="cartSubtotal" class="summary-value">0 đ</span>
-                </div>
-                
-                <div class="summary-row" id="discountRow" style="display: none; justify-content: space-between; margin: 10px 0;">
-                    <span>Giảm giá:</span>
-                    <span id="cartDiscount" class="summary-value text-green">-0 đ</span>
-                </div>
-                
-                <div class="summary-row">
-                    <span>Phí giao hàng:</span>
-                    <span class="summary-value text-green">Miễn phí</span>
-                </div>
-                
-                <div class="promo-code-container" style="margin: 20px 0 15px;">
-                    <div style="display: flex; gap: 10px;">
-                        <input type="text" id="promoInput" placeholder="Nhập mã giảm giá" style="flex: 1; padding: 10px 12px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); outline: none; background: var(--bg-main); font-family: inherit; font-size: 0.9rem;">
-                        <button type="button" id="applyPromoBtn" class="btn btn-primary" style="padding: 10px 15px; font-size: 0.9rem;">Áp dụng</button>
-                    </div>
-                    <div id="promoMsg" style="margin-top: 6px; font-size: 0.85rem; font-weight: 500; display: none;"></div>
-                </div>
-                
-                <hr class="summary-divider">
-                <div class="summary-row summary-total">
-                    <span>Tổng cộng:</span>
-                    <span id="cartTotal" class="summary-value total-value">0 đ</span>
-                </div>
-                <a href="checkout.html" class="btn btn-primary btn-block">Tiến hành thanh toán</a>
-                <a href="products.html" class="continue-shopping"><i class="fa-solid fa-arrow-left"></i> Tiếp tục mua sắm</a>
-            </div>
+        <div class="box-shadow-panel" style="padding: 35px; background-color: var(--bg-alt); border: 1px solid var(--border-color); border-radius: var(--radius-md); line-height: 1.8; color: var(--text-main);">
+            <p style="margin-bottom: 20px;">Chào mừng bạn đến với BookHaven. Việc truy cập và mua hàng trên website của chúng tôi đồng nghĩa với việc bạn đồng ý tuân thủ các điều khoản dịch vụ dưới đây.</p>
+            
+            <h3 style="color: var(--primary-color); margin-top: 30px; margin-bottom: 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">1. Quyền sở hữu trí tuệ</h3>
+            <p style="margin-bottom: 20px;">Toàn bộ nội dung hiển thị trên trang web bao gồm: Logo, thiết kế, hình ảnh bìa sách, văn bản trích dẫn đều thuộc sở hữu trí tuệ của BookHaven hoặc các đơn vị xuất bản liên kết. Nghiêm cấm mọi hành vi sao chép, phân phối hoặc sửa đổi thông tin cho mục đích thương mại phi pháp khi chưa có sự đồng ý bằng văn bản của chúng tôi.</p>
+            
+            <h3 style="color: var(--primary-color); margin-top: 30px; margin-bottom: 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">2. Quyền lợi và trách nhiệm của Khách hàng</h3>
+            <ul style="padding-left: 20px; margin-bottom: 20px; list-style-type: square;">
+                <li style="margin-bottom: 10px;">Cung cấp đầy đủ, trung thực các thông tin cá nhân như họ tên, địa chỉ nhận hàng và số điện thoại khi đặt hàng để việc vận chuyển được chính xác.</li>
+                <li style="margin-bottom: 10px;">Thanh toán đầy đủ giá trị đơn hàng tương ứng khi nhận sách (COD) hoặc các hình thức được hỗ trợ.</li>
+                <li style="margin-bottom: 10px;">Được quyền yêu cầu kiểm tra tình trạng đóng gói của sách trước khi ký nhận hàng từ shipper.</li>
+            </ul>
+            
+            <h3 style="color: var(--primary-color); margin-top: 30px; margin-bottom: 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">3. Điều khoản giao dịch và hủy đơn</h3>
+            <p style="margin-bottom: 20px;">BookHaven có quyền hủy bỏ đơn hàng nếu phát hiện số điện thoại không hợp lệ (sai định dạng) hoặc thông tin địa chỉ không chính xác. Khách hàng có nhu cầu thay đổi thông tin giao hàng hoặc hủy đơn vui lòng liên hệ bộ phận CSKH càng sớm càng tốt trước khi đơn hàng chuyển sang trạng thái "Đang vận chuyển".</p>
         </div>
     </main>
 

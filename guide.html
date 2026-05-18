@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng dẫn mua hàng - BookHaven</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo/logo.png" alt="BookHaven Logo" style="height: 50px;">
+            </a>
+
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm sách, tác giả...">
+                <button type="button" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="products.html">Cửa hàng</a></li>
+                    <li><a href="labs.html" class="lab-btn">Lab thực hành</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="login.html" class="action-icon" title="Tài khoản"><i class="fa-regular fa-user"></i></a>
+                    <a href="cart.html" class="action-icon cart-icon" title="Giỏ hàng">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content: Buying Guide -->
+    <main class="main-content container" style="padding: 40px 20px; max-width: 900px;">
+        <h1 class="page-title" style="font-family: var(--font-heading); color: var(--primary-color); border-bottom: 2px solid var(--secondary-color); padding-bottom: 15px; margin-bottom: 30px; display: inline-block;">Hướng dẫn mua hàng trực tuyến</h1>
+        
+        <div class="box-shadow-panel" style="padding: 35px; background-color: var(--bg-alt); border: 1px solid var(--border-color); border-radius: var(--radius-md); line-height: 1.8; color: var(--text-main);">
+            <p style="margin-bottom: 30px; font-size: 1.05rem;">Quy trình đặt mua sách trực tuyến trên BookHaven cực kỳ nhanh chóng và đơn giản. Dưới đây là 4 bước hướng dẫn chi tiết để bạn dễ dàng sở hữu những tác phẩm yêu thích:</p>
+            
+            <div style="display: flex; flex-direction: column; gap: 30px;">
+                <!-- Step 1 -->
+                <div style="display: flex; gap: 20px; align-items: flex-start;">
+                    <div style="background-color: var(--secondary-color); color: var(--bg-main); font-weight: 700; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">1</div>
+                    <div>
+                        <h4 style="color: var(--primary-color); font-size: 1.15rem; margin: 0 0 8px;">Bước 1: Tìm kiếm & Lọc Sách tuyển chọn</h4>
+                        <p style="margin: 0; color: var(--text-muted);">Truy cập trang <strong><a href="products.html" style="color: var(--primary-color);">Cửa hàng</a></strong>. Bạn có thể sử dụng thanh công cụ tìm kiếm theo tên sách/tác giả hoặc sử dụng các thanh bộ lọc danh mục thể loại và khoảng giá ở cột bên trái để nhanh chóng tìm thấy cuốn sách mong muốn.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div style="display: flex; gap: 20px; align-items: flex-start;">
+                    <div style="background-color: var(--secondary-color); color: var(--bg-main); font-weight: 700; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">2</div>
+                    <div>
+                        <h4 style="color: var(--primary-color); font-size: 1.15rem; margin: 0 0 8px;">Bước 2: Thêm vào Giỏ hàng hoặc Sách yêu thích</h4>
+                        <p style="margin: 0; color: var(--text-muted);">Khi tìm thấy sách ưng ý, bạn có thể click nút <strong>Trái tim</strong> để lưu vào danh sách yêu thích cá nhân hoặc click chọn nút <strong>Thêm vào giỏ hàng</strong> để giỏ hàng tự động cập nhật số lượng.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div style="display: flex; gap: 20px; align-items: flex-start;">
+                    <div style="background-color: var(--secondary-color); color: var(--bg-main); font-weight: 700; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">3</div>
+                    <div>
+                        <h4 style="color: var(--primary-color); font-size: 1.15rem; margin: 0 0 8px;">Bước 3: Nhập Mã Giảm Giá & Kiểm tra Giỏ hàng</h4>
+                        <p style="margin: 0; color: var(--text-muted);">Mở trang <strong><a href="cart.html" style="color: var(--primary-color);">Giỏ hàng</a></strong>, kiểm tra lại danh sách sách đã chọn. Điền các mã ưu đãi giảm giá độc quyền của BookHaven (như: <code>BOOKHAVEN10</code>, <code>CHAOHE50</code>) vào ô mã giảm giá để nhận chiết khấu trực tiếp.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div style="display: flex; gap: 20px; align-items: flex-start;">
+                    <div style="background-color: var(--secondary-color); color: var(--bg-main); font-weight: 700; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">4</div>
+                    <div>
+                        <h4 style="color: var(--primary-color); font-size: 1.15rem; margin: 0 0 8px;">Bước 4: Tiến hành Thanh toán & Đặt hàng</h4>
+                        <p style="margin: 0; color: var(--text-muted);">Nhấn "Tiến hành thanh toán" để sang trang <strong><a href="checkout.html" style="color: var(--primary-color);">Thanh toán</a></strong>. Nhập họ tên, số điện thoại Việt Nam hợp lệ và địa chỉ giao hàng chính xác, sau đó nhấn "Xác nhận đặt hàng" để hoàn tất giao dịch và theo dõi lịch sử tại trang cá nhân.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="index.html" class="logo"><img src="assets/images/logo/logo.png" alt="BookHaven Logo" style="height: 50px;"></a>
+                <p>Nền tảng mua sắm sách trực tuyến uy tín, đa dạng thể loại và giao hàng nhanh chóng.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Về chúng tôi</h3>
+                <ul>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Hỗ trợ khách hàng</h3>
+                <ul>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Kết nối</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Đồ án Cuối kỳ Nhập môn ứng dụng web</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
