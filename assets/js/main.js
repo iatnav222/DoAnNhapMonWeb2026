@@ -273,8 +273,7 @@ function renderProductDetail() {
             <div class="product-rating" style="font-size: 1.2rem; margin-bottom: 20px;">${starsHtml} (${product.rating}/5)</div>
             <div class="detail-price">${formatVND(product.price)}</div>
             <div class="detail-desc">
-                <p>Đây là phần mô tả nội dung sách giả lập. Cuốn sách <strong>${product.title}</strong> của tác giả <strong>${product.author}</strong> là một trong những tựa sách bán chạy nhất trong thể loại ${product.category}.</p>
-                <p>Mua ngay hôm nay để nhận được mức giá ưu đãi và nhiều phần quà hấp dẫn.</p>
+                ${product.description}
             </div>
             <div style="display: flex; gap: 20px; align-items: center; margin-top: 30px;">
                 <button class="btn btn-primary" style="font-size: 1.1rem; padding: 12px 30px;" onclick="addToCart(${product.id})">
