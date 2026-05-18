@@ -60,7 +60,7 @@ function renderFeaturedProducts() {
     if (!container) return; // Bỏ qua nếu đang ở trang khác không có thẻ này
 
     // Lọc ra các sản phẩm có isFeatured = true từ file products.js
-    const featured = products.filter(p => p.isFeatured).slice(0, 6); // Lấy tối đa 6 sản phẩm
+    const featured = products.filter(p => p.isFeatured).slice(0, 8); // Lấy tối đa 8 sản phẩm
     
     let html = '';
     featured.forEach(product => {
@@ -189,23 +189,60 @@ function removeFromCart(productId) {
 // ==========================================
 // TRANG CỬA HÀNG (PRODUCTS.HTML)
 // ==========================================
-function renderShopProducts(productsToRender = products) {
+let currentPage = 1;
+const itemsPerPage = 6;
+let currentFilteredProducts = [];
+
+function renderShopProducts(productsToRender = products, page = 1) {
     const container = document.getElementById('shopProducts');
     const noMsg = document.getElementById('noProductsMsg');
+    const paginationContainer = document.getElementById('pagination');
     if (!container) return;
 
     if (productsToRender.length === 0) {
         container.innerHTML = '';
+        if (paginationContainer) paginationContainer.innerHTML = '';
         noMsg.style.display = 'block';
         return;
     }
 
     noMsg.style.display = 'none';
+    
+    // Pagination logic
+    const totalPages = Math.ceil(productsToRender.length / itemsPerPage);
+    if (page < 1) page = 1;
+    if (page > totalPages) page = totalPages;
+    currentPage = page;
+
+    const startIndex = (page - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const paginatedProducts = productsToRender.slice(startIndex, endIndex);
+
     let html = '';
-    productsToRender.forEach(product => {
+    paginatedProducts.forEach(product => {
         html += createProductCard(product);
     });
     container.innerHTML = html;
+
+    // Render Pagination Buttons
+    if (paginationContainer) {
+        let pagHtml = '';
+        if (totalPages > 1) {
+            for (let i = 1; i <= totalPages; i++) {
+                if (i === currentPage) {
+                    pagHtml += `<button class="btn btn-primary" style="padding: 5px 12px; min-width: 40px;">${i}</button>`;
+                } else {
+                    pagHtml += `<button class="btn" style="padding: 5px 12px; min-width: 40px; background-color: var(--bg-alt); border: 1px solid var(--border-color); color: var(--text-main);" onclick="changePage(${i})">${i}</button>`;
+                }
+            }
+        }
+        paginationContainer.innerHTML = pagHtml;
+    }
+}
+
+function changePage(page) {
+    renderShopProducts(currentFilteredProducts, page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function initShopFilters() {
@@ -254,8 +291,12 @@ function initShopFilters() {
             else if (sortVal === 'name-desc') filtered.sort((a, b) => b.title.localeCompare(a.title));
         }
 
-        renderShopProducts(filtered);
+        currentFilteredProducts = filtered;
+        renderShopProducts(filtered, 1);
     }
+
+    // Initialize state
+    currentFilteredProducts = products;
 
     searchInput.addEventListener('input', filterProducts);
     if (sortSelect) sortSelect.addEventListener('change', filterProducts);
