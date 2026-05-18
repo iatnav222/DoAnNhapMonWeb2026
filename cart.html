@@ -3,16 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BookHaven - Hệ thống bán sách trực tuyến</title>
+    <title>Giỏ hàng - BookHaven</title>
     
-    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome (Icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -20,40 +16,32 @@
     <!-- Header Section -->
     <header class="header">
         <div class="container header-container">
-            <!-- Logo -->
             <a href="index.html" class="logo">
                 <i class="fa-solid fa-book-open"></i> BookHaven
             </a>
 
-            <!-- Search Bar -->
             <div class="search-bar">
                 <input type="text" id="searchInput" placeholder="Tìm kiếm sách, tác giả...">
                 <button type="button" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
 
-            <!-- Navigation & Actions -->
             <nav class="nav-menu">
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active">Trang chủ</a></li>
+                    <li><a href="index.html">Trang chủ</a></li>
                     <li><a href="products.html">Cửa hàng</a></li>
                     <li class="dropdown">
                         <a href="#">Báo cáo Lab <i class="fa-solid fa-chevron-down"></i></a>
                         <ul class="dropdown-content">
                             <li><a href="labs/lab1.html">Lab 1</a></li>
                             <li><a href="labs/lab2.html">Lab 2</a></li>
-                            <li><a href="labs/lab3.html">Lab 3</a></li>
-                            <li><a href="labs/lab4.html">Lab 4</a></li>
-                            <li><a href="labs/lab5.html">Lab 5</a></li>
-                            <li><a href="labs/lab6.html">Lab 6</a></li>
-                            <li><a href="labs/lab7.html">Lab 7</a></li>
-                            <li><a href="labs/lab8.html">Lab 8</a></li>
+                            <!-- Các lab khác -->
                         </ul>
                     </li>
                 </ul>
                 
                 <div class="nav-actions">
                     <a href="login.html" class="action-icon" title="Tài khoản"><i class="fa-regular fa-user"></i></a>
-                    <a href="cart.html" class="action-icon cart-icon" title="Giỏ hàng">
+                    <a href="cart.html" class="action-icon cart-icon active" title="Giỏ hàng">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <span class="cart-count">0</span>
                     </a>
@@ -62,29 +50,45 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Banner -->
-        <section class="banner">
-            <div class="container banner-container">
-                <div class="banner-text">
-                    <h1>Khám phá tri thức<br><span>thức tỉnh tâm hồn</span></h1>
-                    <p>Hàng ngàn đầu sách hấp dẫn đang chờ bạn khám phá với mức giá ưu đãi nhất.</p>
-                    <a href="products.html" class="btn btn-primary">Mua sắm ngay</a>
+    <!-- Main Content: Cart -->
+    <main class="main-content container page-cart">
+        <h1 class="page-title">Giỏ hàng của bạn</h1>
+        
+        <div class="cart-layout">
+            <!-- Danh sách sản phẩm trong giỏ -->
+            <div class="cart-items-container">
+                <div class="cart-header">
+                    <span>Sản phẩm</span>
+                    <span>Giá</span>
+                    <span>Số lượng</span>
+                    <span>Tổng</span>
+                    <span></span>
                 </div>
-                <div class="banner-image">
-                    <img src="https://placehold.co/500x400/f8f9fa/6c757d?text=Banner+Image" alt="Book Banner">
+                <div id="cartItemsContainer">
+                    <!-- JS sẽ render HTML các item vào đây -->
                 </div>
             </div>
-        </section>
 
-        <!-- Featured Products Placeholder -->
-        <section class="featured-products container">
-            <h2 class="section-title">Sách Nổi Bật</h2>
-            <div class="products-grid" id="featuredProducts">
-                <!-- JS sẽ render sản phẩm vào đây -->
+            <!-- Tổng kết đơn hàng -->
+            <div class="cart-summary">
+                <h3>Tổng đơn hàng</h3>
+                <div class="summary-row">
+                    <span>Tạm tính:</span>
+                    <span id="cartSubtotal" class="summary-value">0 đ</span>
+                </div>
+                <div class="summary-row">
+                    <span>Phí giao hàng:</span>
+                    <span class="summary-value text-green">Miễn phí</span>
+                </div>
+                <hr class="summary-divider">
+                <div class="summary-row summary-total">
+                    <span>Tổng cộng:</span>
+                    <span id="cartTotal" class="summary-value total-value">0 đ</span>
+                </div>
+                <a href="checkout.html" class="btn btn-primary btn-block">Tiến hành thanh toán</a>
+                <a href="products.html" class="continue-shopping"><i class="fa-solid fa-arrow-left"></i> Tiếp tục mua sắm</a>
             </div>
-        </section>
+        </div>
     </main>
 
     <!-- Footer Section -->
@@ -109,14 +113,6 @@
                     <li><a href="#">Chính sách đổi trả</a></li>
                     <li><a href="#">Liên hệ</a></li>
                 </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Kết nối</h3>
-                <div class="social-links">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                </div>
             </div>
         </div>
         <div class="footer-bottom">

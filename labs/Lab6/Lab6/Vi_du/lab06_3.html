@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .topmenu {
+            overflow: hidden;
+            background-color: rgb(78, 43, 43);
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .topmenu a {
+            float: left;
+            display: block;
+            text-align: left;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 16px;
+        }
+
+        .topmenu a:hover {
+            background-color: aliceblue;
+            color: black;
+            transition: .5s ease-in-out;
+        }
+
+        .topmenu .icon {
+            display: none;
+        }
+
+        /* Desktop - Menu nằm ngang */
+        @media screen and (min-width: 601px) {
+            .topmenu a {
+                display: block;
+                float: left;
+            }
+
+            .topmenu .icon {
+                display: none;
+            }
+        }
+
+        /* Mobile - Menu ẩn mặc định */
+        @media screen and (max-width: 600px) {
+            
+            /* Home (first-child) luôn hiện */
+            .topmenu a:first-child {
+                display: block;
+                flex: 1;
+                padding: 10px 16px;
+            }
+
+            /* Ẩn News, Contact, About */
+            .topmenu a:not(.icon):not(:first-child) {
+                display: none;
+                flex: 0 0 100%;
+                float: none;
+                padding: 10px 16px;
+            }
+
+            /* Hiện icon menu nằm cùng dòng với Home */
+            .topmenu .icon {
+                display: block;
+                padding: 10px 16px;
+                flex: 0 0 ;
+            }
+
+            /* Khi có class responsive, hiện menu dọc */
+            .topmenu.responsive a:not(.icon):not(:first-child) {
+                display: block;
+                order: 2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topmenu" id="myMenu">
+        <a href="#">Home</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+        <a class="icon" onclick="toggleMenu()"><img src="img/more.png" alt="" height="20px" width="20px"></a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("myMenu");
+            if (menu.className === "topmenu") {
+                menu.className += " responsive";
+            } else {
+                menu.className = "topmenu";
+            }
+        }
+    </script>
+</body>
+
+</html>

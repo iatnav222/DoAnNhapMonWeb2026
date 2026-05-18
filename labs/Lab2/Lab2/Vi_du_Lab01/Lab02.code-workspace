@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../Lab03"
+		},
+		{
+			"path": "../../Lab04"
+		},
+		{
+			"path": "../../lab05"
+		},
+		{
+			"path": "../../Lab06"
+		},
+		{
+			"path": "../../sudu-ebook2"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "sudu-ebook2"
+	}
+}
