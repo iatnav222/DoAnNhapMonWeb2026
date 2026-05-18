@@ -303,6 +303,12 @@ function initShopFilters() {
         });
     }
 
+    // Parse URL parameter search
+    const urlSearch = urlParams.get('search');
+    if (urlSearch) {
+        searchInput.value = urlSearch;
+    }
+
     function filterProducts() {
         const keyword = searchInput.value.toLowerCase();
         
@@ -1019,6 +1025,25 @@ document.addEventListener('DOMContentLoaded', () => {
     labLinks.forEach(link => {
         link.textContent = 'Lab Thực Hành';
     });
+
+    // Global Header Search Bar Handler
+    const searchInputEl = document.getElementById('searchInput');
+    const searchBtnEl = document.getElementById('searchBtn');
+    if (searchInputEl && searchBtnEl) {
+        const executeSearch = () => {
+            const keyword = searchInputEl.value.trim();
+            if (keyword) {
+                window.location.href = `products.html?search=${encodeURIComponent(keyword)}`;
+            }
+        };
+
+        searchBtnEl.addEventListener('click', executeSearch);
+        searchInputEl.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                executeSearch();
+            }
+        });
+    }
 
     // Header & chung
     updateCartBadge();
