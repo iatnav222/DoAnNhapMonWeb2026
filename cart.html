@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giỏ hàng - BookHaven</title>
+    <title>Giá» hÃ ng - BookHaven</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,31 +17,31 @@
     <header class="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <i class="fa-solid fa-book-open"></i> BookHaven
+                <img src="assets/images/logo/logo.png" alt="BookHaven Logo" style="height: 50px;">
             </a>
 
             <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Tìm kiếm sách, tác giả...">
+                <input type="text" id="searchInput" placeholder="TÃ¬m kiáº¿m sÃ¡ch, tÃ¡c giáº£...">
                 <button type="button" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
 
             <nav class="nav-menu">
                 <ul class="nav-links">
-                    <li><a href="index.html">Trang chủ</a></li>
-                    <li><a href="products.html">Cửa hàng</a></li>
+                    <li><a href="index.html">Trang chá»§</a></li>
+                    <li><a href="products.html">Cá»­a hÃ ng</a></li>
                     <li class="dropdown">
-                        <a href="#">Báo cáo Lab <i class="fa-solid fa-chevron-down"></i></a>
+                        <a href="#">BÃ¡o cÃ¡o Lab <i class="fa-solid fa-chevron-down"></i></a>
                         <ul class="dropdown-content">
                             <li><a href="labs/lab1.html">Lab 1</a></li>
                             <li><a href="labs/lab2.html">Lab 2</a></li>
-                            <!-- Các lab khác -->
+                            <!-- CÃ¡c lab khÃ¡c -->
                         </ul>
                     </li>
                 </ul>
                 
                 <div class="nav-actions">
-                    <a href="login.html" class="action-icon" title="Tài khoản"><i class="fa-regular fa-user"></i></a>
-                    <a href="cart.html" class="action-icon cart-icon active" title="Giỏ hàng">
+                    <a href="login.html" class="action-icon" title="TÃ i khoáº£n"><i class="fa-regular fa-user"></i></a>
+                    <a href="cart.html" class="action-icon cart-icon active" title="Giá» hÃ ng">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <span class="cart-count">0</span>
                     </a>
@@ -52,41 +52,41 @@
 
     <!-- Main Content: Cart -->
     <main class="main-content container page-cart">
-        <h1 class="page-title">Giỏ hàng của bạn</h1>
+        <h1 class="page-title">Giá» hÃ ng cá»§a báº¡n</h1>
         
         <div class="cart-layout">
-            <!-- Danh sách sản phẩm trong giỏ -->
+            <!-- Danh sÃ¡ch sáº£n pháº©m trong giá» -->
             <div class="cart-items-container">
                 <div class="cart-header">
-                    <span>Sản phẩm</span>
-                    <span>Giá</span>
-                    <span>Số lượng</span>
-                    <span>Tổng</span>
+                    <span>Sáº£n pháº©m</span>
+                    <span>GiÃ¡</span>
+                    <span>Sá»‘ lÆ°á»£ng</span>
+                    <span>Tá»•ng</span>
                     <span></span>
                 </div>
                 <div id="cartItemsContainer">
-                    <!-- JS sẽ render HTML các item vào đây -->
+                    <!-- JS sáº½ render HTML cÃ¡c item vÃ o Ä‘Ã¢y -->
                 </div>
             </div>
 
-            <!-- Tổng kết đơn hàng -->
+            <!-- Tá»•ng káº¿t Ä‘Æ¡n hÃ ng -->
             <div class="cart-summary">
-                <h3>Tổng đơn hàng</h3>
+                <h3>Tá»•ng Ä‘Æ¡n hÃ ng</h3>
                 <div class="summary-row">
-                    <span>Tạm tính:</span>
-                    <span id="cartSubtotal" class="summary-value">0 đ</span>
+                    <span>Táº¡m tÃ­nh:</span>
+                    <span id="cartSubtotal" class="summary-value">0 Ä‘</span>
                 </div>
                 <div class="summary-row">
-                    <span>Phí giao hàng:</span>
-                    <span class="summary-value text-green">Miễn phí</span>
+                    <span>PhÃ­ giao hÃ ng:</span>
+                    <span class="summary-value text-green">Miá»…n phÃ­</span>
                 </div>
                 <hr class="summary-divider">
                 <div class="summary-row summary-total">
-                    <span>Tổng cộng:</span>
-                    <span id="cartTotal" class="summary-value total-value">0 đ</span>
+                    <span>Tá»•ng cá»™ng:</span>
+                    <span id="cartTotal" class="summary-value total-value">0 Ä‘</span>
                 </div>
-                <a href="checkout.html" class="btn btn-primary btn-block">Tiến hành thanh toán</a>
-                <a href="products.html" class="continue-shopping"><i class="fa-solid fa-arrow-left"></i> Tiếp tục mua sắm</a>
+                <a href="checkout.html" class="btn btn-primary btn-block">Tiáº¿n hÃ nh thanh toÃ¡n</a>
+                <a href="products.html" class="continue-shopping"><i class="fa-solid fa-arrow-left"></i> Tiáº¿p tá»¥c mua sáº¯m</a>
             </div>
         </div>
     </main>
@@ -95,28 +95,28 @@
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-col">
-                <a href="index.html" class="logo"><i class="fa-solid fa-book-open"></i> BookHaven</a>
-                <p>Nền tảng mua sắm sách trực tuyến uy tín, đa dạng thể loại và giao hàng nhanh chóng.</p>
+                <a href="index.html" class="logo"><img src="assets/images/logo/logo.png" alt="BookHaven Logo" style="height: 50px;"></a>
+                <p>Ná»n táº£ng mua sáº¯m sÃ¡ch trá»±c tuyáº¿n uy tÃ­n, Ä‘a dáº¡ng thá»ƒ loáº¡i vÃ  giao hÃ ng nhanh chÃ³ng.</p>
             </div>
             <div class="footer-col">
-                <h3>Về chúng tôi</h3>
+                <h3>Vá» chÃºng tÃ´i</h3>
                 <ul>
-                    <li><a href="#">Giới thiệu</a></li>
-                    <li><a href="#">Chính sách bảo mật</a></li>
-                    <li><a href="#">Điều khoản sử dụng</a></li>
+                    <li><a href="#">Giá»›i thiá»‡u</a></li>
+                    <li><a href="#">ChÃ­nh sÃ¡ch báº£o máº­t</a></li>
+                    <li><a href="#">Äiá»u khoáº£n sá»­ dá»¥ng</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h3>Hỗ trợ khách hàng</h3>
+                <h3>Há»— trá»£ khÃ¡ch hÃ ng</h3>
                 <ul>
-                    <li><a href="#">Hướng dẫn mua hàng</a></li>
-                    <li><a href="#">Chính sách đổi trả</a></li>
-                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="#">HÆ°á»›ng dáº«n mua hÃ ng</a></li>
+                    <li><a href="#">ChÃ­nh sÃ¡ch Ä‘á»•i tráº£</a></li>
+                    <li><a href="#">LiÃªn há»‡</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 BookHaven. Thiết kế cho Đồ án Môn học.</p>
+            <p>&copy; 2026 BookHaven. Thiáº¿t káº¿ cho Äá»“ Ã¡n MÃ´n há»c.</p>
         </div>
     </footer>
 
