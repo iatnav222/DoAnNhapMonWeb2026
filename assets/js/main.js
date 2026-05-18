@@ -210,22 +210,55 @@ function renderShopProducts(productsToRender = products) {
 
 function initShopFilters() {
     const searchInput = document.getElementById('shopSearch');
-    const catLinks = document.querySelectorAll('#categoryList a');
-    if (!searchInput || catLinks.length === 0) return;
+    const categoryList = document.getElementById('categoryList');
+    const priceList = document.getElementById('priceList');
+    const sortSelect = document.getElementById('shopSort');
+    if (!searchInput || !categoryList) return;
+
+    // Render danh mục động từ products
+    const uniqueCategories = [...new Set(products.map(p => p.category))];
+    let catHtml = '<li><a href="#" class="active" data-cat="all">Tất cả sách</a></li>';
+    uniqueCategories.forEach(cat => {
+        catHtml += '<li><a href="#" data-cat="' + cat + '">' + cat + '</a></li>';
+    });
+    categoryList.innerHTML = catHtml;
+
+    const catLinks = categoryList.querySelectorAll('a');
+    const priceLinks = priceList ? priceList.querySelectorAll('a') : [];
 
     let currentCat = 'all';
+    let currentPrice = 'all';
 
     function filterProducts() {
         const keyword = searchInput.value.toLowerCase();
-        const filtered = products.filter(p => {
+        
+        // Filter
+        let filtered = products.filter(p => {
             const matchSearch = p.title.toLowerCase().includes(keyword) || p.author.toLowerCase().includes(keyword);
             const matchCat = currentCat === 'all' || p.category === currentCat;
-            return matchSearch && matchCat;
+            
+            let matchPrice = true;
+            if (currentPrice === 'under-70') matchPrice = p.price < 70000;
+            else if (currentPrice === '70-120') matchPrice = p.price >= 70000 && p.price <= 120000;
+            else if (currentPrice === 'over-120') matchPrice = p.price > 120000;
+
+            return matchSearch && matchCat && matchPrice;
         });
+
+        // Sort
+        if (sortSelect) {
+            const sortVal = sortSelect.value;
+            if (sortVal === 'price-asc') filtered.sort((a, b) => a.price - b.price);
+            else if (sortVal === 'price-desc') filtered.sort((a, b) => b.price - a.price);
+            else if (sortVal === 'name-asc') filtered.sort((a, b) => a.title.localeCompare(b.title));
+            else if (sortVal === 'name-desc') filtered.sort((a, b) => b.title.localeCompare(a.title));
+        }
+
         renderShopProducts(filtered);
     }
 
     searchInput.addEventListener('input', filterProducts);
+    if (sortSelect) sortSelect.addEventListener('change', filterProducts);
 
     catLinks.forEach(link => {
         link.addEventListener('click', (e) => {
@@ -236,6 +269,18 @@ function initShopFilters() {
             filterProducts();
         });
     });
+
+    if (priceLinks.length > 0) {
+        priceLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                priceLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                currentPrice = link.getAttribute('data-price');
+                filterProducts();
+            });
+        });
+    }
 }
 
 // ==========================================

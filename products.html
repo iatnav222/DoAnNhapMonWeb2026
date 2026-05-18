@@ -39,14 +39,30 @@
                     <h3>Tìm kiếm</h3>
                     <input type="text" id="shopSearch" placeholder="Tên sách, tác giả..." class="form-control">
                 </div>
+                <div class="filter-group" style="margin-bottom: 25px;">
+                    <h3>Sắp xếp</h3>
+                    <select id="shopSort" class="form-control" style="width: 100%; padding: 10px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background-color: var(--bg-alt); color: var(--text-main); font-family: inherit;">
+                        <option value="default">Mặc định</option>
+                        <option value="price-asc">Giá: Thấp đến Cao</option>
+                        <option value="price-desc">Giá: Cao đến Thấp</option>
+                        <option value="name-asc">Tên: A - Z</option>
+                        <option value="name-desc">Tên: Z - A</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <h3>Khoảng giá</h3>
+                    <ul class="category-list" id="priceList">
+                        <li><a href="#" class="active" data-price="all">Tất cả giá</a></li>
+                        <li><a href="#" data-price="under-70">Dưới 70.000đ</a></li>
+                        <li><a href="#" data-price="70-120">70.000đ - 120.000đ</a></li>
+                        <li><a href="#" data-price="over-120">Trên 120.000đ</a></li>
+                    </ul>
+                </div>
                 <div class="filter-group">
                     <h3>Danh mục</h3>
                     <ul class="category-list" id="categoryList">
                         <li><a href="#" class="active" data-cat="all">Tất cả sách</a></li>
-                        <li><a href="#" data-cat="Văn học">Văn học</a></li>
-                        <li><a href="#" data-cat="Kỹ năng sống">Kỹ năng sống</a></li>
-                        <li><a href="#" data-cat="Lịch sử">Lịch sử</a></li>
-                        <li><a href="#" data-cat="CNTT">CNTT</a></li>
+                        <!-- JS Render -->
                     </ul>
                 </div>
             </aside>
