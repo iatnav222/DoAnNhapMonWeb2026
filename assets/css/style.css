@@ -1,19 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap');
+
 /* =========================================
    CSS VARIABLES (DESIGN TOKENS)
    ========================================= */
 :root {
-    /* Colors */
-    --primary-color: #2563eb; /* Blue */
-    --primary-hover: #1d4ed8;
-    --secondary-color: #f59e0b; /* Amber */
-    --text-main: #1f2937;
-    --text-muted: #6b7280;
-    --bg-main: #ffffff;
-    --bg-alt: #f3f4f6;
-    --border-color: #e5e7eb;
+    /* Colors - PhoiMau.txt (Earth + Vintage Bookstore) */
+    --primary-color: #1E3A2F; /* Dark Forest Green */
+    --primary-hover: #2F5A46; /* Muted Emerald Green */
+    --secondary-color: #8B6B4A; /* Walnut Brown (Accent) */
+    --text-main: #1F1F1F;
+    --text-muted: #6B6B6B;
+    --bg-main: #F5F1E8; /* Warm Cream (Background chính) */
+    --bg-alt: #FFFDF8; /* Card Background */
+    --border-color: #D8CCB8;
     
     /* Typography */
     --font-main: 'Inter', sans-serif;
+    --font-heading: 'Playfair Display', serif;
     
     /* Shadows & Radius */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -36,6 +39,10 @@ body {
     color: var(--text-main);
     background-color: var(--bg-main);
     line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, .logo, .page-title, .section-title {
+    font-family: var(--font-heading);
 }
 
 a {
@@ -83,8 +90,8 @@ img {
    HEADER & NAVIGATION
    ========================================= */
 .header {
-    background-color: var(--bg-main);
-    border-bottom: 1px solid var(--border-color);
+    background-color: var(--primary-color);
+    border-bottom: none;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -99,9 +106,9 @@ img {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--bg-main);
     display: flex;
     align-items: center;
     gap: 8px;
@@ -111,7 +118,7 @@ img {
 .search-bar {
     display: flex;
     flex: 0 1 400px;
-    background-color: var(--bg-alt);
+    background-color: rgba(255, 255, 255, 0.08);
     border-radius: var(--radius-md);
     overflow: hidden;
     border: 1px solid transparent;
@@ -119,7 +126,7 @@ img {
 }
 
 .search-bar:focus-within {
-    border-color: var(--primary-color);
+    border-color: var(--secondary-color);
 }
 
 .search-bar input {
@@ -129,19 +136,23 @@ img {
     padding: 10px 16px;
     outline: none;
     font-family: inherit;
+    color: var(--bg-main);
+}
+.search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .search-bar button {
     border: none;
     background: transparent;
     padding: 0 16px;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: color 0.3s;
 }
 
 .search-bar button:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 /* Navigation */
@@ -157,12 +168,17 @@ img {
     font-weight: 500;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-    color: var(--primary-color);
+.nav-links a {
+    color: var(--bg-main);
+    transition: color 0.3s;
 }
 
-/* Dropdown Menu (For Labs) */
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--secondary-color);
+}
+
+/* Dropdown Menu */
 .dropdown {
     position: relative;
 }
@@ -172,11 +188,11 @@ img {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: var(--bg-main);
+    background-color: var(--primary-hover);
     min-width: 150px;
     box-shadow: var(--shadow-md);
     border-radius: var(--radius-md);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--primary-color);
     padding: 8px 0;
 }
 
@@ -189,11 +205,12 @@ img {
     display: block;
     padding: 8px 16px;
     font-weight: 400;
+    color: var(--bg-main);
 }
 
 .dropdown-content li a:hover {
-    background-color: var(--bg-alt);
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 @keyframes fadeIn {
@@ -209,13 +226,13 @@ img {
 
 .action-icon {
     font-size: 1.25rem;
-    color: var(--text-main);
+    color: var(--bg-main);
     position: relative;
     transition: color 0.3s;
 }
 
 .action-icon:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .cart-icon .cart-count {
@@ -833,10 +850,11 @@ img {
    FOOTER
    ========================================= */
 .footer {
-    background-color: #111827; /* Dark Gray */
-    color: #e5e7eb;
+    background-color: var(--primary-color);
+    color: rgba(255, 255, 255, 0.8);
     padding: 60px 0 20px;
     margin-top: 60px;
+    border-top: 3px solid var(--secondary-color);
 }
 
 .footer-container {
@@ -846,18 +864,23 @@ img {
     margin-bottom: 40px;
 }
 
-.footer-col h3 {
-    color: white;
+.footer-col h3, .footer-col .logo {
+    color: var(--bg-main);
     margin-bottom: 20px;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
+    font-family: var(--font-heading);
 }
 
 .footer-col ul li {
     margin-bottom: 12px;
 }
 
+.footer-col ul li a {
+    transition: color 0.3s;
+}
+
 .footer-col ul li a:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .social-links {
@@ -866,14 +889,19 @@ img {
     font-size: 1.5rem;
 }
 
+.social-links a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s;
+}
+
 .social-links a:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .footer-bottom {
     text-align: center;
     padding-top: 20px;
-    border-top: 1px solid #374151;
-    color: #9ca3af;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.6);
     font-size: 0.875rem;
 }

@@ -1,0 +1,90 @@
+logo và banner đều follow theo các màu này.
+
+Cụm màu của logo và banner này đi theo kiểu earthy + bookstore vintage hiện đại — tạo cảm giác tri thức, ấm, yên tĩnh và đáng tin.
+
+Bảng màu chính
+Xanh bookstore đậm (màu chủ đạo)
+
+Dùng cho logo, tiêu đề, icon, navbar.
+
+#1E3A2F — Dark Forest Green
+#254735 — Deep Book Green
+#2F5A46 — Muted Emerald Green
+
+Cảm giác:
+
+Tri thức
+Calm
+Premium
+Vintage hiện đại
+Beige / Kem giấy sách (background)
+#F5F1E8 — Warm Cream
+#EAE2D6 — Soft Paper Beige
+#DDD2C1 — Vintage Paper
+
+Dùng cho:
+
+Background
+Card
+Section nền lớn
+
+Cảm giác:
+
+Giống giấy sách
+Dịu mắt
+Đọc lâu không mỏi
+Nâu gỗ / coffee wood accent
+#8B6B4A — Walnut Brown
+#A67C52 — Warm Coffee Brown
+#6F4E37 — Dark Wood Brown
+
+Dùng cho:
+
+Border
+Hover
+Divider
+Button phụ
+
+Combo màu hoàn chỉnh cho website
+Thành phần	Màu
+Background chính	#F5F1E8
+Navbar/Footer	#1E3A2F
+Text chính	#1F1F1F
+Text phụ	#6B6B6B
+Accent	#8B6B4A
+Card	#FFFDF8
+Border	#D8CCB8
+Hover button	#2F5A46
+
+Style phù hợp
+
+Website này hợp với:
+
+Minimal
+Editorial
+Vintage modern
+Scandinavian bookstore
+Cozy library aesthetic
+
+Font rất hợp:
+
+Heading: Cormorant Garamond, Playfair Display
+Body: Inter, Lato, Poppins
+Gợi ý vibe tổng thể
+
+Nếu follow đúng cụm màu này, web sẽ có cảm giác:
+
+như bookstore cao cấp
+yên tĩnh
+tri thức
+hơi “cafe sách châu Âu”
+phù hợp ecommerce sách hoặc landing page đọc sách
+
+Tránh:
+
+màu quá neon
+đỏ tươi
+xanh dương cyber
+gradient quá mạnh
+
+vì sẽ phá vibe bookstore hiện tại.
