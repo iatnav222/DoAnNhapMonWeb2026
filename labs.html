@@ -1,89 +1,207 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Báo Cáo Lab - BookHaven</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    
+
     <style>
         .page-labs {
             padding: 60px 0;
             min-height: 60vh;
         }
+
         .labs-header {
             text-align: center;
             margin-bottom: 50px;
         }
+
         .labs-header h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: var(--primary-color);
             margin-bottom: 15px;
+            font-weight: 700;
         }
+
         .labs-header p {
             color: var(--text-muted);
             font-size: 1.1rem;
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
+            position: relative;
         }
+
+        .labs-header p::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            margin: 20px auto 0;
+            border-radius: 2px;
+        }
+
         .labs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 30px;
         }
+
         .lab-card {
             background-color: var(--bg-alt);
             border: 1px solid var(--border-color);
             border-radius: var(--radius-lg);
-            padding: 40px 20px;
-            text-align: center;
-            transition: all 0.3s ease;
+            padding: 35px 25px;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             box-shadow: var(--shadow-sm);
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            align-items: stretch;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
         }
+
+        .lab-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--primary-color);
+            transition: background-color 0.3s ease;
+        }
+
         .lab-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md), 0 10px 20px -10px rgba(139, 107, 74, 0.15);
             border-color: var(--secondary-color);
         }
-        .lab-icon {
-            font-size: 3rem;
-            color: var(--secondary-color);
-            margin-bottom: 20px;
+
+        .lab-card:hover::before {
+            background-color: var(--secondary-color);
         }
+
+        .lab-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: rgba(139, 107, 74, 0.1);
+            color: var(--secondary-color);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            border: 1px solid rgba(139, 107, 74, 0.2);
+        }
+
+        .lab-card-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+
+        .lab-icon-wrapper {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: var(--bg-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .lab-card:hover .lab-icon-wrapper {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .lab-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .lab-card:hover .lab-icon {
+            color: var(--bg-alt);
+        }
+
         .lab-title {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             color: var(--primary-color);
             margin-bottom: 10px;
+            font-weight: 700;
         }
+
         .lab-desc {
             color: var(--text-muted);
-            margin-bottom: 25px;
             font-size: 0.95rem;
+            line-height: 1.5;
         }
-        .lab-btn {
-            background-color: var(--primary-color);
-            color: var(--bg-alt);
-            padding: 10px 24px;
-            border-radius: 50px;
+
+        .lab-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .lab-link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 18px;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-size: 0.9rem;
             font-weight: 500;
             transition: all 0.3s ease;
-            display: inline-block;
+            text-decoration: none;
         }
-        .lab-card:hover .lab-btn {
-            background-color: var(--secondary-color);
-            color: white;
+
+        .lab-link-btn span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .lab-link-btn i.arrow-icon {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            transition: all 0.3s ease;
+        }
+
+        .lab-link-btn:hover {
+            background-color: var(--primary-color);
+            color: var(--bg-alt);
+            border-color: var(--primary-color);
+            transform: translateX(4px);
+        }
+
+        .lab-link-btn:hover i.arrow-icon {
+            color: var(--bg-alt);
+            transform: translateX(2px);
         }
     </style>
 </head>
+
 <body>
 
     <!-- Header Section -->
@@ -104,7 +222,7 @@
                     <li><a href="products.html">Cửa hàng</a></li>
                     <li><a href="labs.html" class="active">Báo cáo Lab</a></li>
                 </ul>
-                
+
                 <div class="nav-actions">
                     <a href="login.html" class="action-icon" title="Tài khoản"><i class="fa-regular fa-user"></i></a>
                     <a href="cart.html" class="action-icon cart-icon" title="Giỏ hàng">
@@ -119,66 +237,196 @@
     <!-- Main Content -->
     <main class="main-content container page-labs">
         <div class="labs-header">
-            <h1>Danh Sách Báo Cáo Lab</h1>
-            <p>Tổng hợp 8 bài thực hành môn Nhập môn Web. Nhấn vào từng mục để xem chi tiết bài làm.</p>
+            <h1>LAB THỰC HÀNH</h1>
         </div>
 
         <div class="labs-grid">
             <!-- Lab 1 -->
             <div class="lab-card">
-                <i class="fa-solid fa-laptop-code lab-icon"></i>
-                <h2 class="lab-title">Lab 1</h2>
-                <p class="lab-desc">HTML Cơ bản & Cấu trúc Web</p>
-                <a href="labs/lab1.html" class="lab-btn">Xem chi tiết</a>
+                <span class="lab-badge">2 Bài tập</span>
+                <div class="lab-card-header">
+                    <div class="lab-icon-wrapper">
+                        <i class="fa-solid fa-laptop-code lab-icon"></i>
+                    </div>
+                    <h2 class="lab-title">Lab 1</h2>
+                </div>
+                <div class="lab-links">
+                    <a href="labs/Lab01/Vi_du/lab1_bai3.html" class="lab-link-btn" target="_blank">
+                        <span><i class="fa-solid fa-code"></i> Bài 3</span>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    </a>
+                    <a href="labs/Lab01/Vi_du/lab1_bai4.html" class="lab-link-btn" target="_blank">
+                        <span><i class="fa-solid fa-code"></i> Bài 4</span>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    </a>
+                </div>
             </div>
+
             <!-- Lab 2 -->
             <div class="lab-card">
-                <i class="fa-solid fa-palette lab-icon"></i>
-                <h2 class="lab-title">Lab 2</h2>
-                <p class="lab-desc">CSS Cơ bản & Định dạng</p>
-                <a href="labs/lab2.html" class="lab-btn">Xem chi tiết</a>
+                <span class="lab-badge">3 Bài tập</span>
+                <div class="lab-card-header">
+                    <div class="lab-icon-wrapper">
+                        <i class="fa-solid fa-laptop-code lab-icon"></i>
+                    </div>
+                    <h2 class="lab-title">Lab 2</h2>
+                </div>
+                <div class="lab-links">
+                    <a href="labs/Lab02/lab02_bai1.html" class="lab-link-btn" target="_blank">
+                        <span><i class="fa-solid fa-code"></i> Bài 1</span>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    </a>
+                    <a href="labs/Lab02/lab02_bai2.html" class="lab-link-btn" target="_blank">
+                        <span><i class="fa-solid fa-code"></i> Bài 2</span>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    </a>
+                    <a href="labs/Lab02/Vi_du_Lab01/lab02_bai3.html" class="lab-link-btn" target="_blank">
+                        <span><i class="fa-solid fa-code"></i> Bài 3</span>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    </a>
+                </div>
             </div>
+
             <!-- Lab 3 -->
             <div class="lab-card">
-                <i class="fa-solid fa-border-all lab-icon"></i>
-                <h2 class="lab-title">Lab 3</h2>
-                <p class="lab-desc">Layout Flexbox & Grid</p>
-                <a href="labs/lab3.html" class="lab-btn">Xem chi tiết</a>
+                <span class="lab-badge">3 Bài tập</span>
+                <div class="lab-card-header">
+                    <div class="lab-icon-wrapper">
+                        <i class="fa-solid fa-laptop-code lab-icon"></i>
+                    </div>
+                    <h2 class="lab-title">Lab 3</h2>
+                </div>
+                <div class="lab-links">
+                    <a href="labs/Lab03/Vi_du_Lab01/lab03_bai1.html" class="lab-link-btn" target="_blank">
+                        <span><i class="fa-solid fa-code"></i> Bài 1</span>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    </a>
+                    <a href="labs/Lab03/Vi_du_Lab01/lab03_bai2.html" class="lab-link-btn" target="_blank">
+                        <span><i class="fa-solid fa-code"></i> Bài 2</span>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    </a>
+                    <a href="labs/Lab03/Vi_du_Lab01/lab03_bai3.html" class="lab-link-btn" target="_blank">
+                        <span><i class="fa-solid fa-code"></i> Bài 3</span>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    </a>
+                </div>
             </div>
+
             <!-- Lab 4 -->
             <div class="lab-card">
-                <i class="fa-solid fa-mobile-screen lab-icon"></i>
-                <h2 class="lab-title">Lab 4</h2>
-                <p class="lab-desc">Responsive Web Design</p>
-                <a href="labs/lab4.html" class="lab-btn">Xem chi tiết</a>
+                <span class="lab-badge">3 Bài tập</span>
+                <div class="lab-card-header">
+                    <div class="lab-icon-wrapper">
+                        <i class="fa-solid fa-laptop-code lab-icon"></i>
+                    </div>
+                    <h2 class="lab-title">Lab 4</h2>
+                </div>
+                <div class="lab-links">
+                    <a href="labs/Lab04/Vi_du/lab04_bai1.html" class="lab-link-btn" target="_blank">
+                        <span><i class="fa-solid fa-code"></i> Bài 1</span>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    </a>
+                    <a href="labs/Lab04/Vi_du/lab04_bai2.html" class="lab-link-btn" target="_blank">
+                        <span><i class="fa-solid fa-code"></i> Bài 2</span>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    </a>
+                    <a href="labs/Lab04/Vi_du/lab04_bai3.html" class="lab-link-btn" target="_blank">
+                        <span><i class="fa-solid fa-code"></i> Bài 3</span>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    </a>
+                </div>
             </div>
+
             <!-- Lab 5 -->
             <div class="lab-card">
-                <i class="fa-brands fa-js lab-icon"></i>
-                <h2 class="lab-title">Lab 5</h2>
-                <p class="lab-desc">Javascript Cơ bản & DOM</p>
-                <a href="labs/lab5.html" class="lab-btn">Xem chi tiết</a>
+                <span class="lab-badge">2 Bài tập</span>
+                <div class="lab-card-header">
+                    <div class="lab-icon-wrapper">
+                        <i class="fa-solid fa-laptop-code lab-icon"></i>
+                    </div>
+                    <h2 class="lab-title">Lab 5</h2>
+                </div>
+                <div class="lab-links">
+                    <a href="labs/Lab05/lab05_menu.html" class="lab-link-btn" target="_blank">
+                        <span><i class="fa-solid fa-code"></i> Bài 1</span>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    </a>
+                    <a href="labs/Lab05/Bai_2/index.html" class="lab-link-btn" target="_blank">
+                        <span><i class="fa-solid fa-code"></i> Bài 2</span>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    </a>
+                </div>
             </div>
+
             <!-- Lab 6 -->
             <div class="lab-card">
-                <i class="fa-solid fa-wand-magic-sparkles lab-icon"></i>
-                <h2 class="lab-title">Lab 6</h2>
-                <p class="lab-desc">Hiệu ứng & Animation JS</p>
-                <a href="labs/lab6.html" class="lab-btn">Xem chi tiết</a>
+                <span class="lab-badge">3 Bài tập</span>
+                <div class="lab-card-header">
+                    <div class="lab-icon-wrapper">
+                        <i class="fa-solid fa-laptop-code lab-icon"></i>
+                    </div>
+                    <h2 class="lab-title">Lab 6</h2>
+                </div>
+                <div class="lab-links">
+                    <a href="labs/Lab06/lab06_ menu_responsive.html" class="lab-link-btn" target="_blank">
+                        <span><i class="fa-solid fa-code"></i> Bài 1</span>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    </a>
+                    <a href="labs/Lab06/Bai_2_Minh_hoa_layout/index.html" class="lab-link-btn" target="_blank">
+                        <span><i class="fa-solid fa-code"></i> Bài 2</span>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    </a>
+                    <a href="labs/Lab06/Bai_2_Minh_hoa_layout/index1.html" class="lab-link-btn" target="_blank">
+                        <span><i class="fa-solid fa-code"></i> Bài 3</span>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    </a>
+                </div>
             </div>
+
             <!-- Lab 7 -->
             <div class="lab-card">
-                <i class="fa-solid fa-database lab-icon"></i>
-                <h2 class="lab-title">Lab 7</h2>
-                <p class="lab-desc">Lưu trữ Web & LocalStorage</p>
-                <a href="labs/lab7.html" class="lab-btn">Xem chi tiết</a>
+                <span class="lab-badge">2 Bài tập</span>
+                <div class="lab-card-header">
+                    <div class="lab-icon-wrapper">
+                        <i class="fa-solid fa-laptop-code lab-icon"></i>
+                    </div>
+                    <h2 class="lab-title">Lab 7</h2>
+                </div>
+                <div class="lab-links">
+                    <a href="labs/Lab07/Vi_du/index.html" class="lab-link-btn" target="_blank">
+                        <span><i class="fa-solid fa-code"></i> Bài 1</span>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    </a>
+                    <a href="labs/Lab07/demo_bai_2/index.html" class="lab-link-btn" target="_blank">
+                        <span><i class="fa-solid fa-code"></i> Bài 2</span>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    </a>
+                </div>
             </div>
+
             <!-- Lab 8 -->
             <div class="lab-card">
-                <i class="fa-solid fa-rocket lab-icon"></i>
-                <h2 class="lab-title">Lab 8</h2>
-                <p class="lab-desc">Đồ án Web & Triển khai</p>
-                <a href="labs/lab8.html" class="lab-btn">Xem chi tiết</a>
+                <span class="lab-badge">3 Bài tập</span>
+                <div class="lab-card-header">
+                    <div class="lab-icon-wrapper">
+                        <i class="fa-solid fa-laptop-code lab-icon"></i>
+                    </div>
+                    <h2 class="lab-title">Lab 8</h2>
+                </div>
+                <div class="lab-links">
+                    <a href="labs/Lab08/bai1&2/lab08_slider.html" class="lab-link-btn" target="_blank">
+                        <span><i class="fa-solid fa-code"></i> Bài 1</span>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    </a>
+                    <a href="labs/Lab08/bai1&2/lab08_slider_auto.html" class="lab-link-btn" target="_blank">
+                        <span><i class="fa-solid fa-code"></i> Bài 2</span>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    </a>
+                    <a href="labs/Lab08/index.html" class="lab-link-btn" target="_blank">
+                        <span><i class="fa-solid fa-code"></i> Bài 3</span>
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </main>
@@ -187,7 +435,8 @@
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-col">
-                <a href="index.html" class="logo"><img src="assets/images/logo/logo.png" alt="BookHaven Logo" style="height: 50px;"></a>
+                <a href="index.html" class="logo"><img src="assets/images/logo/logo.png" alt="BookHaven Logo"
+                        style="height: 50px;"></a>
                 <p>Nền tảng mua sắm sách trực tuyến uy tín, đa dạng thể loại và giao hàng nhanh chóng.</p>
             </div>
             <div class="footer-col">
@@ -224,4 +473,5 @@
     <script src="assets/js/products.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

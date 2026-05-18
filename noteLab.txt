@@ -1,25 +1,29 @@
 lab 1 (2 mục): 
-+lab1-3.html
-+lab1_4.html
++ /Lab01/Vi_du/lab1_bai3.html
++ /Lab01/Vi_du/lab1_bai4.html
 lab 2 (3 mục):
-+lab2-1.html
-+lab2-2.html
-+lab2-3.html
++/Lab02/lab02_bai1.html
++/Lab02/lab02_bai2.html
++/Lab02/lab02_bai3.html
 lab 3 (3 mục):
-+ 3 bài tương ứng
++ /Lab03/Vi_du_Lab01/lab03_bai1.html
++ /Lab03/Vi_du_Lab01/lab03_bai2.html
++ /Lab03/Vi_du_Lab01/lab03_bai3.html
 lab 4 (3 mục)
-+3 bài tương ứng
++/Lab04/Vi_du/lab04_bai1.html
++/Lab04/Vi_du/lab04_bai2.html
++/Lab04/Vi_du/lab04_bai3.html
 lab 5(2 mục)
-+lab menu
-+lab 5 ->bai2 -> index
++/Lab05/lab05_menu.html
++/Lab05/Bai_2/index.html
 lab 6 (3 mục)
-+lab responsive
-+index
-+index1
++ /Lab06/lab06_responsive.html
++/Lab06/Bai_2_Minh_hoa_layout/index.html
++/Lab06/Bai_2_Minh_hoa_layout/index1.html
 lab 7 (2 mục)
-+vi du-> index
-+demobai2 -> index
++/Lab07/Vi_du/index.html
++/Lab07/demo_bai_2/index.html
 lab 8 (3 mục)
-+slider
-+slider auto
-+index
++/Lab08/bai1&2/lab08_slider.html
++/Lab08/bai1&2/lab08_slider_auto.html
++/Lab08/index.html
