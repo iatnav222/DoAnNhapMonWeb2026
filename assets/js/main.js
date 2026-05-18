@@ -60,7 +60,7 @@ function renderFeaturedProducts() {
     if (!container) return; // Bỏ qua nếu đang ở trang khác không có thẻ này
 
     // Lọc ra các sản phẩm có isFeatured = true từ file products.js
-    const featured = products.filter(p => p.isFeatured).slice(0, 8); // Lấy tối đa 8 sản phẩm
+    const featured = products.filter(p => p.isFeatured).slice(0, 6); // Lấy tối đa 6 sản phẩm
     
     let html = '';
     featured.forEach(product => {
