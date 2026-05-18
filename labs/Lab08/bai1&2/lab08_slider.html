@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="./css/lab08_slider.css">
+  </head>
+  <body>
+    <div class="slideshow-container">
+      <div class="mySlides fade" style="display: block;">
+        <img src="../img/slide_1.jpeg" style="width: 100%">
+      </div>
+      <div class="mySlides fade" style="display: none;">
+        <img src="../img/slide_2.jpg" style="width: 100%">
+      </div>
+      <div class="mySlides fade" style="display: none;">
+        <img src="../img/slide_3.jpg" style="width: 100%">
+      </div>
+      <div class="mySlides fade" style="display: none;">
+        <img src="../img/slide_4.jpg" style="width: 100%">
+      </div>
+      <div class="mySlides fade" style="display: none;">
+        <img src="../img/slide_5.jpg" style="width: 100%">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&lt;</a>
+      <a class="next" onclick="plusSlides(1)">&gt;</a>
+    </div>
+    <br>
+    <div style="text-align: center">
+      <span class="dot active" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+
+
+    <!-- js -->
+  <!--   <script src="./js/lab08_slider_auto.js"></script> -->
+  </body>
+
+
+</html>

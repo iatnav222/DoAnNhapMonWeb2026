@@ -1,0 +1,123 @@
+
+body {
+	font-size: 16px; /* Set a base font size */
+}
+
+.wrapper {
+	display: flex;
+	/* kich hoat flex box*/
+	flex-flow: row wrap;
+	font-weight: bold;
+	text-align: center;
+}
+
+.wrapper>* {
+	padding: 10px;
+	flex: 1 100%;
+	/* cho tất cả phần tử bên trong có độ dài 100% và tỉ lệ chiếm không gian trống là như nhau*/
+}
+
+.header-flex-2 {
+	background: tomato;
+}
+
+.footer-flex-2 {
+	background: lightgreen;
+	order: 4;
+}
+
+.main {
+	background: deepskyblue;
+}
+
+/* 2 phần aside sẽ chỉ chiếm 1 phần không gian */
+.aside-1 {
+	background: gold;
+	order: 1;
+}
+
+.aside-2 {
+	background: hotpink;
+	order: 3;
+}
+
+.img-responsive{
+	max-width:100%;
+	height:auto;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.main{
+		flex: 3 0;
+		/* cho phần nội dung main ở giữa chiếm 3 phần không gian trống so với 2 phần aside bên cạnh */
+		order: 1;
+	}
+
+	body {
+		font-size: 20px; 
+	}
+
+	.aside-1 {
+		height: auto;
+	}
+	
+	.aside-2 {
+		height: auto;
+	}
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px) {
+
+	body {
+		font-size: 20px; /* Decrease font size for smaller screens */
+	}
+	.aside {
+		flex: 1;
+	}
+	.aside-1 {
+		height: auto;
+	}
+	
+	.aside-2 {
+		height: auto;
+	}
+	
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.img-responsive {
+		border-radius: 20px;
+		box-shadow: 2px 2px chartreuse;
+		filter: invert();
+	}
+	
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.main{
+		flex: 3 0px;
+		order: 2;
+	}
+
+	.aside-1 {
+		height: auto;
+	}
+	
+	.aside-2 {
+		height: auto;
+	}
+	
+	.aside {
+		flex: 1 0 0;
+	}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}

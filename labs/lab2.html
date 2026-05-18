@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Lab 2 - BookHaven</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <style>
+        .lab-page {
+            display: flex;
+            min-height: calc(100vh - 80px); /* Minus header */
+            background-color: var(--bg-alt);
+        }
+        .lab-sidebar {
+            width: 280px;
+            background-color: var(--bg-main);
+            border-right: 1px solid var(--border-color);
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .lab-sidebar h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-family: var(--font-heading);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+        .lab-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .lab-list li a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 15px;
+            background-color: var(--bg-alt);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            color: var(--text-main);
+            transition: all 0.3s ease;
+        }
+        .lab-list li a:hover, .lab-list li a.active {
+            background-color: var(--primary-color);
+            color: var(--bg-alt);
+            border-color: var(--primary-color);
+        }
+        .lab-list li a i {
+            color: var(--secondary-color);
+        }
+        .lab-list li a.active i {
+            color: var(--bg-alt);
+        }
+        .lab-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .lab-title-bar {
+            background-color: var(--primary-color);
+            color: var(--bg-alt);
+            padding: 15px 25px;
+            border-radius: var(--radius-md) var(--radius-md) 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .lab-title-bar h3 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            margin: 0;
+        }
+        .lab-title-bar a {
+            color: var(--bg-alt);
+            font-size: 0.9rem;
+            text-decoration: underline;
+            transition: color 0.3s;
+        }
+        .lab-title-bar a:hover {
+            color: var(--secondary-color);
+        }
+        .lab-iframe-container {
+            flex: 1;
+            background-color: white;
+            border: 1px solid var(--border-color);
+            border-top: none;
+            border-radius: 0 0 var(--radius-md) var(--radius-md);
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .back-btn:hover {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo/logo.png" alt="BookHaven Logo" style="height: 50px;">
+            </a>
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Trang chủ</a></li>
+                    <li><a href="../products.html">Cửa hàng</a></li>
+                    <li><a href="../labs.html" class="active">Báo cáo Lab</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="lab-page">
+        <!-- Sidebar -->
+        <aside class="lab-sidebar">
+            <a href="../labs.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Quay lại mục lục</a>
+            <h2>Lab 2</h2>
+            <ul class="lab-list" id="labList">
+                <li><a href="#" data-src="Lab02/lab2-1.html" data-name="lab2-1.html" class="active"><i class="fa-solid fa-file-code"></i> lab2-1.html</a></li>
+                <li><a href="#" data-src="Lab02/lab2-2.html" data-name="lab2-2.html" ><i class="fa-solid fa-file-code"></i> lab2-2.html</a></li>
+                <li><a href="#" data-src="Lab02/lab2-3.html" data-name="lab2-3.html" ><i class="fa-solid fa-file-code"></i> lab2-3.html</a></li>
+                
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="lab-content">
+            <div class="lab-title-bar">
+                <h3 id="currentFileName">Đang hiển thị: lab2-1.html</h3>
+                <a href="Lab02/lab2-1.html" id="openNewTab" target="_blank"><i class="fa-solid fa-external-link-alt"></i> Mở trong Tab mới</a>
+            </div>
+            <div class="lab-iframe-container">
+                <iframe id="labFrame" src="Lab02/lab2-1.html"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const labLinks = document.querySelectorAll('#labList a');
+        const labFrame = document.getElementById('labFrame');
+        const currentFileName = document.getElementById('currentFileName');
+        const openNewTab = document.getElementById('openNewTab');
+
+        labLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class
+                labLinks.forEach(l => l.classList.remove('active'));
+                
+                // Add active class to clicked link
+                this.classList.add('active');
+                
+                // Get data
+                const src = this.getAttribute('data-src');
+                const name = this.getAttribute('data-name');
+                
+                // Update iframe
+                labFrame.src = src;
+                
+                // Update title bar
+                currentFileName.textContent = "Đang hiển thị: " + name;
+                openNewTab.href = src;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+.wrapper {
+	display: flex;
+	/* kich hoat flex box*/
+	flex-flow: row wrap;
+	font-weight: bold;
+	text-align: center;
+}
+
+.wrapper>* {
+	padding: 10px;
+	flex: 1 100%;
+	/* cho tất cả phần tử bên trong có độ dài 100% và tỉ lệ chiếm không gian trống là như nhau*/
+}
+
+.header-flex-2 {
+	background: tomato;
+	/* order: 0; */
+}
+
+.footer-flex-2 {
+	background: lightgreen;
+	order: 4;
+}
+
+.main {
+	text-align: left;
+	background: deepskyblue;
+	height: 400px;
+}
+
+/* 2 phần aside sẽ chỉ chiếm 1 phần không gian */
+.aside-1 {
+	background: gold;
+	height: auto;
+	order: 1;
+}
+
+.aside-2 {
+	background: hotpink;
+	height: auto; /* Đang px cố định - Bài 3 bỏ hoặc cho Auto */
+	order: 3;
+}
+.img-res {
+	max-width: 100%;
+	height: auto;
+}
+@media only screen and (min-width: 900px) {
+	.main{
+		flex: 3;
+		/* cho phần nội dung main ở giữa chiếm 3 phần không gian trống so với 2 phần aside bên cạnh */
+		order: 2;
+		
+	}
+	.img-res {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.aside {
+		flex: 1; /* Cho aside (cha) chiếm 1 phần */
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.aside {
+		background-color: black;
+		color: aliceblue;
+		border-radius: 10px;
+		border: 1px solid lightseagreen;
+	}
+	.aside-1 {
+		flex: 1;
+	}
+	.aside-2 {
+		flex: 2;
+		font-size: 60px;
+	}
+	
+}

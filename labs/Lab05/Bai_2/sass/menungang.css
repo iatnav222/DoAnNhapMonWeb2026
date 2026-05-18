@@ -1,0 +1,40 @@
+.menu-ngang {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+.menu-ngang li {
+  margin: 0;
+  padding: 10px;
+  background-color: aqua;
+  transition: background-color 0.3s ease-in-out;
+}
+.menu-ngang a {
+  text-decoration: none;
+}
+.menu-ngang a a:hover {
+  font-weight: bold;
+  color: brown;
+}
+.menu-ngang li:hover {
+  background-color: orange;
+  border-radius: 5px;
+}
+
+.menu-doc {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.menu-doc li {
+  margin: 0;
+  padding: 10px;
+  background-color: rgb(152, 152, 241);
+  border-bottom: white solid 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+.menu-doc li:hover {
+  filter: brightness(130%);
+  font-style: italic;
+}/*# sourceMappingURL=menungang.css.map */

@@ -1,0 +1,55 @@
+
+$normal-color: blue;
+$primary-color:#404048;
+$white-color: white;
+$border: brown;
+
+
+
+
+.menu-ngang{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    li{
+        margin: 0;
+        padding: 10px;
+        background-color: aqua;
+        transition: background-color 0.3s ease-in-out;
+        
+    }
+    a{
+        text-decoration: none;
+        a:hover{
+            font-weight: bold;
+            color: brown;
+        }
+    }
+
+    li:hover{
+        background-color: orange;
+        border-radius: 5px;
+    }
+    
+    
+
+}
+
+.menu-doc{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    li{
+        margin: 0;
+        padding: 10px;
+        background-color: rgb(152, 152, 241);
+        border-bottom: white solid 10px;
+        transition: background-color 0.3s ease-in-out ;
+        
+    }
+    li:hover{
+        filter: brightness(130%);
+        font-style: italic;
+    }
+}

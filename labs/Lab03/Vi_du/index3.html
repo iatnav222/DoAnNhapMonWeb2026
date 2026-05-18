@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>BookStore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Dancing+Script:wght@600&family=Kanit&family=Lora:wght@500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="path/to/fork-awesome/css/fork-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+    <div id="content" style="background-color: hsl(0deg 19.05% 91.76%);">
+        <form name="frmthemsanpham" action="../xl_lab03_bai3.php" method="post" enctype="multipart/form-data">
+            <table border="0" width="100%" style="margin-top: 20px;">
+            <tbody><tr>
+            <td style="font-weight: bold;" colspan="2" align="center"><em>THÊM SẢN PHẨM MỚI</em></td></tr>
+            
+            
+            <tr><td>Mã sản phẩm</td>
+                <td><input type="text" name="nmProID" size="30" fdprocessedid="tqo1g3"></td>
+            </tr>
+            <tr><td>Tên sản phẩm</td>
+                <td><input type="text" name="nmProName" size="30" fdprocessedid="7rnd7zh"></td>
+            </tr>
+            <tr><td>Hình ảnh</td>
+              <td><input type="file" name="nmProImg"></td>
+            </tr>
+            <tr><td>Hãng sản xuất</td>
+                <td>
+                <select name="nmMan" fdprocessedid="2gx8k8">
+                    <option value="Thiên Long">Thiên Long</option>
+                    <option value="Thiên Long 1">Thiên Long 1</option>
+                    <option value="Thiên Long 2">Thiên Long 2</option>
+              </select></td>
+            </tr>
+            <tr><td>Kích thước</td>
+                <td>
+                W:<input type="text" name="nmWidth" size="30" fdprocessedid="7u5uhe">
+                H:<input type="text" name="nmHeight" size="30" fdprocessedid="pxtdm">
+            </td>
+            </tr>
+            <tr><td>Số trang</td>
+                <td>
+                    <input type="text" name="nmCount" size="30" fdprocessedid="8dk0v">
+                </td>
+              </tr>
+            <tr><td>Tác giả</td>
+              <td>
+                <input type="text" name="nmTacGia" size="30" fdprocessedid="e6jze">
+            </td>
+            </tr>
+            <tr><td>Giá</td>	
+              <td>
+                <input type="text" name="nmPrice" size="30" fdprocessedid="dk9gxsp">
+                Màu: <input type="color" name="nmColor">
+            </td>
+            </tr>
+            <tr><td>Xuất xứ</td>
+                <td><input type="tel" name="nmLive" size="50" fdprocessedid="2w2qf"></td>
+            </tr>
+                <tr><td>Thể loại</td>
+                <td>
+                    <table style="width: 100%;">
+                        <tbody><tr>
+                            <td>
+                            <input type="checkbox" name="nmFunctions[]" value="Van_Hoc"> Văn học <br>
+                            <input type="checkbox" name="nmFunctions[]" value="Kinh_Te"> Kinh tế <br>
+                            <input type="checkbox" name="nmFunctions[]" value="Tam_Ly"> Tâm lý<br>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="nmFunctions[]" value="Thieu_nhi"> Thiếu nhi<br>
+                            <input type="checkbox" name="nmFunctions[]" value="Giao_Khoa"> Giáo khoa<br>
+                            <input type="checkbox" name="nmFunctions[]" value="Ngoai_ngu"> Ngoại ngữ<br>
+                        </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+                </tr>
+                <tr><td>Mô tả chi tiết</td>
+                    <td><textarea name="nmProDet" id="" cols="40" rows="10"></textarea></td>
+                  </tr>
+            </tbody></table>
+            <div class="btn-group" style="text-align: center; margin-top: 10px;">
+                <input type="submit" name="nmSubmit" value="thêm" fdprocessedid="kaj4p8"> 
+                <input type="reset" name="nmReset" value="Xóa">
+            </div> 
+        </form>
+    </div>
+    
+</body>
+
+</html>
