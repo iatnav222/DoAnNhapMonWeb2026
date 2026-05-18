@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cá»­a hÃ ng - BookHaven</title>
+    <title>Cửa hàng - BookHaven</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,10 +16,10 @@
             <a href="index.html" class="logo"><img src="assets/images/logo/logo.png" alt="BookHaven Logo" style="height: 50px;"></a>
             <nav class="nav-menu">
                 <ul class="nav-links">
-                    <li><a href="index.html">Trang chá»§</a></li>
-                    <li><a href="products.html" class="active">Cá»­a hÃ ng</a></li>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="products.html" class="active">Cửa hàng</a></li>
                     <li class="dropdown">
-                        <a href="#">BÃ¡o cÃ¡o Lab <i class="fa-solid fa-chevron-down"></i></a>
+                        <a href="#">Báo cáo Lab <i class="fa-solid fa-chevron-down"></i></a>
                         <ul class="dropdown-content">
                             <li><a href="labs/lab1.html">Lab 1</a></li>
                         </ul>
@@ -40,27 +40,27 @@
         <div class="shop-layout">
             <aside class="shop-sidebar">
                 <div class="filter-group">
-                    <h3>TÃ¬m kiáº¿m</h3>
-                    <input type="text" id="shopSearch" placeholder="TÃªn sÃ¡ch, tÃ¡c giáº£..." class="form-control">
+                    <h3>Tìm kiếm</h3>
+                    <input type="text" id="shopSearch" placeholder="Tên sách, tác giả..." class="form-control">
                 </div>
                 <div class="filter-group">
-                    <h3>Danh má»¥c</h3>
+                    <h3>Danh mục</h3>
                     <ul class="category-list" id="categoryList">
-                        <li><a href="#" class="active" data-cat="all">Táº¥t cáº£ sÃ¡ch</a></li>
-                        <li><a href="#" data-cat="VÄƒn há»c">VÄƒn há»c</a></li>
-                        <li><a href="#" data-cat="Ká»¹ nÄƒng sá»‘ng">Ká»¹ nÄƒng sá»‘ng</a></li>
-                        <li><a href="#" data-cat="Lá»‹ch sá»­">Lá»‹ch sá»­</a></li>
+                        <li><a href="#" class="active" data-cat="all">Tất cả sách</a></li>
+                        <li><a href="#" data-cat="Văn học">Văn học</a></li>
+                        <li><a href="#" data-cat="Kỹ năng sống">Kỹ năng sống</a></li>
+                        <li><a href="#" data-cat="Lịch sử">Lịch sử</a></li>
                         <li><a href="#" data-cat="CNTT">CNTT</a></li>
                     </ul>
                 </div>
             </aside>
             <div class="shop-main">
-                <h1 class="page-title">Cá»­a hÃ ng sÃ¡ch</h1>
+                <h1 class="page-title">Cửa hàng sách</h1>
                 <div class="products-grid" id="shopProducts">
-                    <!-- JS sáº½ render HTML -->
+                    <!-- JS sẽ render HTML -->
                 </div>
                 <div id="noProductsMsg" style="display:none; text-align:center; padding: 40px; color: var(--text-muted);">
-                    KhÃ´ng tÃ¬m tháº¥y sÃ¡ch phÃ¹ há»£p.
+                    Không tìm thấy sách phù hợp.
                 </div>
             </div>
         </div>
